@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap");
+/* Styles for plain/common HTML tags*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #1b262c;
+  color: #bbe1fa;
+  background-image: url(/static/images/az-subtle.png);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+}
+
+::-webkit-scrollbar {
+  background-color: #1b262c;
+  width: 5px;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bbe1fa;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1b262c;
+  border-radius: 100px;
+}
+
+/* Styles for Navigation bar */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  padding-inline-start: 0;
+  font-size: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #c4e7ff;
+  font-family: "Montserrat", sans-serif;
+  display: contents;
+  transition: 0.2s;
+  transition-timing-function: ease;
+}
+
+.nav-links a:hover {
+  color: #0f4c75;
+}
+
+/* Styles for "Timeline" section */
+
+#timeline {
+  margin: 1% 5%;
+}
+
+.paperRight {
+  padding: 6px 16px;
+  width: fit-content;
+}
+
+.paperLeft {
+  padding: 6px 16px;
+  width: fit-content;
+  float: right;
+}
+
+/* Styles for "Skills" section */
+
+#skills {
+  margin: 1% 5%;
+}
+
+/* .footerHR {
+  margin: 40px auto;
+  border: 0;
+  border-top: 10px dotted;
+  width: 60px;
+} */

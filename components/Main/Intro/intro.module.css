@@ -1,0 +1,23 @@
+.introImg {
+  background-image: url(/static/images/marten-bjork-aTt_rNa3gmM-unsplash_edited.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  /* filter: blur(5px);
+    -webkit-filter: blur(5px); */
+  display: flex;
+}
+
+.introContent {
+  color: #ffffff;
+  margin: 5%;
+  align-self: center;
+  text-align: center;
+  width: 100%;
+}
+
+.introContent h1 {
+  font-size: 3rem;
+  margin: 0;
+}

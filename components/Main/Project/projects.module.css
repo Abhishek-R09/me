@@ -1,0 +1,56 @@
+.projects {
+  margin: 1% 5%;
+}
+
+.projectsSection {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectsSection > div {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .projectsSection > div {
+    /* margin: 0 10px; */
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .projectsSection {
+    flex-flow: row wrap;
+  }
+  .projectsSection > div {
+    margin: 0 10px;
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .projectsSection {
+    flex-flow: row;
+  }
+}
+
+/* .projectsSection > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+} */
+/* .gridItem {
+  width: 80%;
+}
+
+@media screen and (min-width: 600px) {
+  .gridItem {
+    width: auto;
+  }
+} */

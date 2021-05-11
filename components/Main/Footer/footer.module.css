@@ -1,0 +1,33 @@
+.footer {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #bbe1fa;
+}
+
+.contact {
+  display: flex;
+  padding-inline-start: 0;
+  text-decoration: none;
+  justify-content: space-evenly;
+  width: 60%;
+  min-width: 200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.contact a,
+.contact a svg {
+  display: inline;
+  transition: 0.2s;
+  transition-timing-function: ease;
+}
+
+.contact a svg:hover {
+  color: #0f4c75;
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    width: 400px;
+  }
+}
