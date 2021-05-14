@@ -84,12 +84,19 @@
   padding: 15px 0;
 }
 
+.desktopMini > div {
+  display: flex;
+  flex-flow: column;
+  height: 50%;
+  justify-content: space-evenly;
+}
+
 .expandedNavLinks {
   padding: 15px 0;
   height: 4rem;
   text-decoration: none;
   color: #c4e7ff;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   transition: 0.2s;
   transition-timing-function: ease;
   display: flex;
@@ -100,6 +107,13 @@
 .expandedNav > ul > li,
 .expandedNav > ul > li {
   padding: 15px 0;
+}
+
+.expandedNav > div {
+  display: flex;
+  flex-flow: column;
+  height: 50%;
+  justify-content: space-evenly;
 }
 
 .expandedNavLinks:hover {

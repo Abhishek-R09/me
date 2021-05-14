@@ -16,10 +16,6 @@
   position: relative;
 }
 
-.projectImage img {
-  border-radius: 10px 10px 0 0;
-}
-
 .projectName {
   text-align: center;
   font-size: 1em;
@@ -45,7 +41,7 @@
   background-color: inherit;
   padding: 7px;
   transition: all 0.3s ease-out;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .srcCodeBtn:hover {

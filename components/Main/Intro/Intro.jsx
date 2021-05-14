@@ -1,9 +1,7 @@
-import classes from "./intro.module.css";
-import React from "react";
-// import myImg from "../../images/profileImg.jpg";
+import classes from './intro.module.css';
 
-const Intro = (props) => {
-  const introTitle = "Aspiring Full Stack Web Developer";
+const Intro = () => {
+  const introTitle = 'Aspiring Full Stack Web Developer';
   const introContent = `I make websites which are responsive and easy to use.`;
   return (
     <div>
