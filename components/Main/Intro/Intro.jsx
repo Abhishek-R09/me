@@ -1,4 +1,5 @@
 import classes from './intro.module.css';
+import Typer from '../../UI/Typer/Typer';
 
 const Intro = () => {
   const introTitle = 'Aspiring Full Stack Web Developer';
@@ -7,7 +8,9 @@ const Intro = () => {
     <div>
       <div className={classes.introImg}>
         <div className={classes.introContent}>
-          <h1>{introTitle}</h1>
+          <h1>
+            <Typer dataText={introTitle} />
+          </h1>
           <hr />
           <p>{introContent}</p>
         </div>

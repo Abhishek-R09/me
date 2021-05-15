@@ -10,7 +10,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  background-color: #1b262c;
+  /* background-color: #1b262c; */
+  background-color: #121212;
   color: #bbe1fa;
   background-image: url(/static/images/az-subtle.png);
 }
@@ -25,10 +26,11 @@ h6 {
 }
 
 h2 {
-  margin: 1.5rem 0;
+  margin: 0;
+  margin-bottom: 1.5rem;
   font-size: 2rem;
   width: 100%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 h3,
@@ -36,8 +38,12 @@ h4 {
   font-family: 'Montserrat', sans-serif;
 }
 
+section {
+  padding: 5%;
+}
+
 ::-webkit-scrollbar {
-  background-color: #1b262c;
+  background-color: #303030;
   width: 5px;
   border-radius: 100px;
 }
@@ -48,14 +54,8 @@ h4 {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #1b262c;
+  background-color: #121212;
   border-radius: 100px;
-}
-
-@media (min-width: 769px) {
-  .main {
-    padding-left: 100px;
-  }
 }
 
 .footerHR {
@@ -89,10 +89,6 @@ h4 {
 
 /* Styles for "Timeline" section */
 
-#timeline {
-  margin: 1% 5%;
-}
-
 .paperRight {
   padding: 6px 16px;
   width: fit-content;
@@ -103,16 +99,3 @@ h4 {
   width: fit-content;
   float: right;
 }
-
-/* Styles for "Skills" section */
-
-#skills {
-  margin: 1% 5%;
-}
-
-/* .footerHR {
-  margin: 40px auto;
-  border: 0;
-  border-top: 10px dotted;
-  width: 60px;
-} */

@@ -1,10 +1,10 @@
 import React from 'react';
-import Head from 'next/head';
 import { Grid } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { faReact, faNode } from '@fortawesome/free-brands-svg-icons';
 import SkillCard from './SkillCard';
+import classes from './Skills.module.css';
 
 const skills = [
   {
@@ -35,10 +35,7 @@ const skills = [
 
 const Skills = () => (
   <>
-    <Head>
-      <title>Abhishek's Skills</title>
-    </Head>
-    <div id="skills">
+    <section id="skills" className={classes.skills}>
       <h2>Skills</h2>
       <Grid container spacing={3} justify="center">
         {skills.map((skill) => (
@@ -52,7 +49,7 @@ const Skills = () => (
           </Grid>
         ))}
       </Grid>
-    </div>
+    </section>
   </>
 );
 

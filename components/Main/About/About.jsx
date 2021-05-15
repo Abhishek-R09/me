@@ -1,7 +1,7 @@
-import React from "react";
-import classes from "./about.styles.module.css";
+import React from 'react';
+import classes from './about.styles.module.css';
 
-function About(props) {
+const About = () => {
   const aboutMeTitle = "Hi! I'm Abhishek Ramasubramanian";
   const contentPara1 = `I'm a Computer Science student from Vellore Institute of Technology, Vellore.
   The amount of progress made in the field of computer science fascinates me and motivates me to 
@@ -18,17 +18,17 @@ function About(props) {
    be updated with the current affairs.`;
 
   return (
-    <div id="about" className={classes.about}>
+    <section id="about" className={classes.about}>
       <h2>About</h2>
-      <div className={classes.aboutImg}></div>
+      <div className={classes.aboutImg} />
       <div className={classes.aboutContent}>
-        <h3 style={{ textAlign: "start" }}>{aboutMeTitle}</h3>
+        <h3 style={{ textAlign: 'start' }}>{aboutMeTitle}</h3>
         <p>{contentPara1}</p>
         <p>{contentPara2}</p>
         <p>{contentPara3}</p>
       </div>
-    </div>
+    </section>
   );
-}
+};
 
 export default About;

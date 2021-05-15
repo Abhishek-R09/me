@@ -23,9 +23,11 @@ const useStyles = makeStyles(() => ({
     // backgroundColor: '#0f4c75',
     color: '#bbe1fa',
     width: '100%',
-    boxShadow: '#0c0c0c 4px 4px 2px 0px',
+    // boxShadow: '#0c0c0c 4px 4px 2px 0px',
+    boxShadow: '#0c0c0c 2px 5px 8px 4px',
     '&.MuiPaper-root': {
-      backgroundColor: '#0f4c75',
+      // backgroundColor: '#0f4c75',
+      backgroundColor: '#303030',
     },
     // border: '1px solid #c3c3c3',
     '@media (min-width: 600px)': {

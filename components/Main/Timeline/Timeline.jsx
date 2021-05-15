@@ -3,7 +3,7 @@ import Timeline from '@material-ui/lab/Timeline';
 import TimeLineItem from './TimeLineItem';
 
 const Education = () => (
-  <div id="timeline">
+  <section id="timeline">
     <h2>Timeline</h2>
     <div>
       <Timeline align="alternate" style={{ padding: 0 }}>
@@ -39,7 +39,7 @@ const Education = () => (
         <TimeLineItem last dotColor="secondary" />
       </Timeline>
     </div>
-  </div>
+  </section>
 );
 
 export default Education;

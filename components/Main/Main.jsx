@@ -14,7 +14,7 @@ const Main = () => (
     <Project />
     <Timeline />
     <Skills />
-    <hr className={classes.footerHR} />
+    {/* <hr className={classes.footerHR} /> */}
     <Footer />
   </main>
 );

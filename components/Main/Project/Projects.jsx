@@ -43,7 +43,7 @@ const projects = [
 ];
 
 const Projects = () => (
-  <div id="projects" className={classes.projects}>
+  <section id="projects" className={classes.projects}>
     <h2>Projects</h2>
     <div className={classes.projectsSection}>
       {projects.map((project) => (
@@ -59,7 +59,7 @@ const Projects = () => (
         </div>
       ))}
     </div>
-  </div>
+  </section>
 );
 
 export default Projects;

@@ -1,5 +1,5 @@
 .about {
-  margin: 1% 5%;
+  /* margin: 5%; */
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -19,7 +19,6 @@
 
 .aboutContent {
   display: inline-block;
-  width: 90%;
   text-align: justify;
 }
 
@@ -33,9 +32,6 @@
   .about {
     flex-flow: row-reverse wrap;
   }
-  /* .about h2 {
-    text-align: left;
-  } */
   .aboutImg {
     width: 40%;
     margin-left: 4%;

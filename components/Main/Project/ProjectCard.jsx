@@ -14,15 +14,17 @@ import classes from './projectCard.module.css';
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    boxShadow: '#0c0c0c 4px 4px 2px 0px',
-    width: '90%',
+    // boxShadow: '#0c0c0c 4px 4px 2px 0px',
+    boxShadow: '#0c0c0c 2px 5px 8px 4px',
+    width: '100%',
     // margin: 'auto',
     height: '100%',
-    margin: '10px 0',
+    margin: '20px 0',
     borderRadius: '10px',
     color: '#bbe1fa',
     '&.MuiPaper-root': {
-      backgroundColor: '#0f4c75',
+      // backgroundColor: '#0f4c75',
+      backgroundColor: '#303030',
     },
   },
   header: {
@@ -85,9 +87,6 @@ function ProjectCard({ imgUrl, imgTitle, projName, type, projLink, projDesc }) {
 
   return (
     <Card className={localClasses.card}>
-      {/* <h4>{projName}</h4>
-        <h6>{type}</h6>
-      </CardHeader> */}
       <CardMedia className={classes.projectImage}>
         <Image
           src={`${imgUrl}`}
