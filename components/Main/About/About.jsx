@@ -1,7 +1,26 @@
 import React from 'react';
+import Image from 'next/image';
+import { makeStyles } from '@material-ui/core/styles';
 import classes from './about.styles.module.css';
 
+const useStyles = makeStyles((theme) => ({
+  about: {
+    '& h2': {
+      color: theme.palette.primary.fontColor2,
+    },
+  },
+  aboutContent: {
+    '& h3': {
+      color: theme.palette.primary.fontColor1,
+    },
+    '& p': {
+      color: theme.palette.primary.fontColor1,
+    },
+  },
+}));
+
 const About = () => {
+  const localClasses = useStyles();
   const aboutMeTitle = "Hi! I'm Abhishek Ramasubramanian";
   const contentPara1 = `I'm a Computer Science student from Vellore Institute of Technology, Vellore.
   The amount of progress made in the field of computer science fascinates me and motivates me to 
@@ -18,10 +37,18 @@ const About = () => {
    be updated with the current affairs.`;
 
   return (
-    <section id="about" className={classes.about}>
+    <section id="about" className={`${classes.about} ${localClasses.about}`}>
       <h2>About</h2>
-      <div className={classes.aboutImg} />
-      <div className={classes.aboutContent}>
+      <div className={classes.aboutImg}>
+        <Image
+          src="/static/images/about-img-edited.jpg"
+          alt="My image"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="top"
+        />
+      </div>
+      <div className={`${classes.aboutContent} ${localClasses.aboutContent}`}>
         <h3 style={{ textAlign: 'start' }}>{aboutMeTitle}</h3>
         <p>{contentPara1}</p>
         <p>{contentPara2}</p>

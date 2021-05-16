@@ -1,20 +1,31 @@
 .desktopNav {
   position: fixed;
   width: 100%;
-  background-color: transparent;
   z-index: 1000;
   transition: background-color 0.1s ease-in;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 40px;
+}
+
+.name,
+.name.active {
+  font-size: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+  /* color: #e5b9a2; */
 }
 
 .desktopNav.active {
-  background-color: #212121;
+  /* background-color: #212121; */
   box-shadow: #0c0c0c 0px 5px 8px 4px;
 }
 
 .linksList {
   list-style-type: none;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-content: center;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -26,6 +37,8 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
 }
 
 .linkBtn {
@@ -38,32 +51,115 @@
   margin: 10px 0;
   padding: 10px 0;
   background-color: transparent;
-  color: white;
+  /* color: #bbe1fa; */
   border: 0;
   font-size: 1.4rem;
   cursor: pointer;
   border-bottom: 1px hidden white;
-  transition: border 0.1s ease;
+  transition: all 0.1s ease;
 }
+
+/* .linkBtn.linkBtn.active {
+  color: #e5b9a2;
+} */
 
 .linkBtn + span {
   height: 2px;
-  background-color: white;
-  animation: out 0.4s ease normal forwards;
+  width: 0;
+  transition: all 0.4s ease;
+  transition: all 0.1s ease;
 }
 
-.linkBtn:hover + span {
-  animation: in 0.2s ease normal forwards;
+.linkBtn.active + span {
+  width: 100%;
+  /* background-color: #e5b9a2; */
+}
+
+.themeToggleBtn {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+  padding: 10px 0;
+  background-color: transparent;
+  /* color: #bbe1fa; */
+  border: 0;
+  border-radius: 10px;
+  /* font-size: 1.4rem; */
+  cursor: pointer;
+  border-bottom: 1px hidden white;
+  transition: all 0.1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease;
+}
+
+.themeToggleBtn:hover {
+  /* color: #e5b9a2; */
+  transform: scale(1.1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .linkBtn:hover {
+    transform: scale(1.1);
+  }
+  .linkBtn:hover + span {
+    /* background-color: #bbe1fa; */
+    width: 100%;
+  }
+  /* .linkBtn.active:hover + span {
+    background-color: #e5b9a2;
+  } */
 }
 
 .linkBtn:focus {
   border: none;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1280px) {
+  .name,
+  .name.active {
+    font-size: 1.1rem;
+  }
+  .linkBtn {
+    width: 100px;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .name,
+  .name.active {
+    font-size: 1rem;
+  }
+  .linkBtn {
+    width: 100px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .desktopNav {
     bottom: 0;
-    background-color: #212121;
+    /* background-color: #212121; */
+    padding: 0;
+  }
+  .name {
+    position: fixed;
+    display: flex;
+    top: 0;
+    padding: 10px;
+    width: 100%;
+    height: fit-content;
+    /* background-color: rgb(33 33 33 / 50%); */
+    justify-content: center;
+    align-items: center;
+  }
+  .linksList {
+    width: 100%;
+  }
+  .name.active {
+    display: none;
   }
   .linkBtn {
     width: 100px;
@@ -71,30 +167,27 @@
   .linkBtn span {
     display: none;
   }
+  .themeToggleBtn {
+    position: fixed;
+    display: flex;
+    right: 0;
+    top: 10%;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px 0 0 20px;
+    /* background-color: rgb(33 33 33); */
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+  }
 }
 
 @media (max-width: 600px) {
+  .linksList {
+    justify-content: space-evenly;
+  }
   .linkBtn {
     width: 25%;
-  }
-}
-
-@keyframes in {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes out {
-  from {
-    width: 100%;
-  }
-
-  to {
-    width: 0%;
   }
 }

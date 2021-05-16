@@ -21,10 +21,12 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
     margin: '20px 0',
     borderRadius: '10px',
-    color: '#bbe1fa',
+    // color: '#bbe1fa',
+    color: theme.palette.primary.fontColor1,
     '&.MuiPaper-root': {
       // backgroundColor: '#0f4c75',
-      backgroundColor: '#303030',
+      // backgroundColor: '#303030',
+      backgroundColor: theme.palette.primary.card,
     },
   },
   header: {
@@ -38,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
     '& .MuiCardHeader-subheader': {
       fontSize: '0.8em',
       margin: '5px',
-      color: '#bbe1fa',
+      // color: '#bbe1fa',
+      color: theme.palette.primary.fontColor1,
     },
   },
   cardActions: {
@@ -48,11 +51,25 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     // alignItems: 'center',
   },
+  srcCodeBtn: {
+    color: theme.palette.primary.fontColor1,
+    borderColor: theme.palette.primary.fontColor1,
+    '&:hover': {
+      color: theme.palette.primary.fontColor2,
+      borderColor: theme.palette.primary.fontColor2,
+    },
+    '&:focus': {
+      color: theme.palette.primary.fontColor2,
+      borderColor: theme.palette.primary.fontColor2,
+    },
+  },
   cardContent: {
-    color: '#bbe1fa',
+    // color: '#bbe1fa',
+    color: theme.palette.primary.fontColor1,
     padding: '0 20px 20px',
     '& p': {
-      color: '#bbe1fa',
+      // color: '#bbe1fa',
+      color: theme.palette.primary.fontColor1,
       fontFamily: 'Open Sans',
     },
   },
@@ -60,15 +77,18 @@ const useStyles = makeStyles((theme) => ({
     transform: 'rotate(0deg)',
     padding: 0,
     marginLeft: 'auto',
-    color: '#bbe1fa',
+    // color: '#bbe1fa',
+    color: theme.palette.primary.fontColor1,
     transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
     '&:hover': {
-      color: '#1b262c',
+      // color: '#1b262c',
+      color: theme.palette.primary.fontColor2,
     },
     '&:focus': {
-      color: '#bbe1fa',
+      // color: '#bbe1fa',
+      color: theme.palette.primary.fontColor1,
     },
   },
   expandOpen: {
@@ -107,7 +127,10 @@ function ProjectCard({ imgUrl, imgTitle, projName, type, projLink, projDesc }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button type="button" className={classes.srcCodeBtn}>
+          <button
+            type="button"
+            className={`${classes.srcCodeBtn} ${localClasses.srcCodeBtn}`}
+          >
             Source Code
           </button>
         </a>

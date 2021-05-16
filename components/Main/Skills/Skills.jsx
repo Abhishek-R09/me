@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { faReact, faNode } from '@fortawesome/free-brands-svg-icons';
@@ -33,24 +34,36 @@ const skills = [
   },
 ];
 
-const Skills = () => (
-  <>
-    <section id="skills" className={classes.skills}>
-      <h2>Skills</h2>
-      <Grid container spacing={3} justify="center">
-        {skills.map((skill) => (
-          <Grid item xs={12} sm={6} md={4} key={skill.name}>
-            <SkillCard
-              name={skill.name}
-              icon={skill.icon}
-              color={skill.color}
-              content={skill.content}
-            />
-          </Grid>
-        ))}
-      </Grid>
-    </section>
-  </>
-);
+const useStyles = makeStyles((theme) => ({
+  skills: {
+    backgroundColor: theme.palette.primary.card,
+    '& h2': {
+      color: theme.palette.primary.fontColor2,
+    },
+  },
+}));
+
+const Skills = () => {
+  const localClasses = useStyles();
+  return (
+    <>
+      <section id="skills" className={localClasses.skills}>
+        <h2>Skills</h2>
+        <Grid container spacing={3} justify="center">
+          {skills.map((skill) => (
+            <Grid item xs={12} sm={6} md={4} key={skill.name}>
+              <SkillCard
+                name={skill.name}
+                icon={skill.icon}
+                color={skill.color}
+                content={skill.content}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </section>
+    </>
+  );
+};
 
 export default Skills;

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import classes from './Navigation.module.css';
-import Hamburger from './Hamburger/Hamburger';
-import MobileMenu from './MobileMenu/MobileMenu';
+import PropTypes from 'prop-types';
+// import classes from './Navigation.module.css';
+// import Hamburger from './Hamburger/Hamburger';
+// import MobileMenu from './MobileMenu/MobileMenu';
 // import SidebarMini from './Sidebar/SidebarMini';
 import DesktopNavigation from './DesktopNavigation/DesktopNavigation';
 
-const NavigationBar = () => (
+const NavigationBar = ({ toggleDarkMode, isDark }) => (
   // const [showNav, setShowNav] = useState(false);
   // const [windowSize, setWindowSize] = useState();
 
@@ -35,7 +36,13 @@ const NavigationBar = () => (
       ) : (
         <DesktopNavigation />
       )} */}
-    <DesktopNavigation />
+    <DesktopNavigation toggleDarkMode={toggleDarkMode} isDark={isDark} />
   </>
 );
+
+NavigationBar.propTypes = {
+  toggleDarkMode: PropTypes.func.isRequired,
+  isDark: PropTypes.bool.isRequired,
+};
+
 export default NavigationBar;

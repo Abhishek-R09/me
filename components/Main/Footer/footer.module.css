@@ -2,7 +2,7 @@
   margin-bottom: 85px;
   padding: 5% 5% 0;
   text-align: center;
-  color: #bbe1fa;
+  /* color: #bbe1fa; */
 }
 
 .contact {
@@ -24,7 +24,7 @@
 }
 
 .contact a svg:hover {
-  color: #0f4c75;
+  /* color: #0f4c75; */
 }
 
 @media screen and (min-width: 769px) {

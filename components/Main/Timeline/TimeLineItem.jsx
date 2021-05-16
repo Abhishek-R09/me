@@ -7,37 +7,53 @@ import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
+import useLoaded from '../../../hooks/use-loaded';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
+  timelineRoot: {
+    height: '150px',
+  },
   oppositeColor: {
-    color: '#c4e7ff',
+    color: theme.palette.primary.fontColor1,
     fontFamily: 'Open Sans',
+  },
+  oppositeContent: {
+    flex: '0',
+    padding: '0',
+    '@media (min-width: 600px)': {
+      flex: '0.2',
+    },
   },
   timelineContent: {
     padding: '0 16px',
+    margin: '10px',
   },
   paperStyle: {
-    padding: '5px',
-    // backgroundColor: '#0f4c75',
-    color: '#bbe1fa',
+    padding: '15px',
+    color: theme.palette.primary.fontColor1,
     width: '100%',
-    // boxShadow: '#0c0c0c 4px 4px 2px 0px',
     boxShadow: '#0c0c0c 2px 5px 8px 4px',
     '&.MuiPaper-root': {
-      // backgroundColor: '#0f4c75',
-      backgroundColor: '#303030',
-    },
-    // border: '1px solid #c3c3c3',
-    '@media (min-width: 600px)': {
-      padding: '5px 15px',
+      backgroundColor: theme.palette.primary.card,
+      height: '80%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
     },
     '@media (min-width: 1024px)': {
-      width: '350px',
+      width: '500px',
+    },
+  },
+  timeLineType: {
+    fontSize: '1rem',
+    '@media (min-width: 600px)': {
+      fontSize: '1.3rem',
     },
   },
   instituteNameStyle: {
+    color: theme.palette.primary.fontColor2,
     fontSize: '0.7rem',
     fontFamily: 'Open Sans',
     '@media (min-width: 600px)': {
@@ -45,7 +61,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   yearStyle: {
-    fontSize: '0.6rem',
+    fontSize: '0.7rem',
     fontFamily: 'Open Sans',
     '@media (min-width: 600px)': {
       fontSize: '1rem',
@@ -54,7 +70,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const TimeLineItem = ({
-  opposite,
+  type,
   dotColor,
   connector,
   last,
@@ -63,35 +79,41 @@ const TimeLineItem = ({
   years,
 }) => {
   const classes = useStyles();
+  const loaded = useLoaded();
   return (
-    <TimelineItem>
-      {opposite && (
-        <TimelineOppositeContent>
-          <Typography variant="body2" className={classes.oppositeColor}>
-            2001
-          </Typography>
-        </TimelineOppositeContent>
-      )}
+    <TimelineItem
+      className={classes.timelineRoot}
+      style={{ height: last ? '10px' : '' }}
+    >
+      <TimelineOppositeContent className={classes.oppositeContent} />
       <TimelineSeparator>
-        <TimelineDot variant="outlined" color={dotColor} />
+        <TimelineDot
+          style={{
+            color: loaded && dotColor,
+            backgroundColor: loaded && dotColor,
+          }}
+        />
         {connector && <TimelineConnector />}
       </TimelineSeparator>
       <TimelineContent className={classes.timelineContent}>
         {last && (
           <Typography variant="body2" className={classes.oppositeColor}>
-            Today
+            2001
           </Typography>
         )}
         {paperSide && (
-          <Paper
-            className={`${paperSide} ${classes.paperStyle}`}
-            // variant="outlined"
-          >
-            <Typography variant="h6" className={classes.instituteNameStyle}>
+          <Paper className={`${paperSide} ${classes.paperStyle}`}>
+            <Typography variant="h6" className={classes.timeLineType}>
+              {type}
+            </Typography>
+            <Typography
+              variant="caption"
+              className={classes.instituteNameStyle}
+            >
               {institute}
             </Typography>
             <Typography variant="caption" className={classes.yearStyle}>
-              {years}
+              {/* `\u00B7` */} {years}
             </Typography>
           </Paper>
         )}
@@ -101,7 +123,7 @@ const TimeLineItem = ({
 };
 
 TimeLineItem.defaultProps = {
-  opposite: false,
+  type: '',
   connector: false,
   last: false,
   paperSide: null,
@@ -110,7 +132,7 @@ TimeLineItem.defaultProps = {
 };
 
 TimeLineItem.propTypes = {
-  opposite: PropTypes.bool,
+  type: PropTypes.string,
   connector: PropTypes.bool,
   dotColor: PropTypes.string.isRequired,
   last: PropTypes.bool,

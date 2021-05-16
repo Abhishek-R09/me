@@ -1,9 +1,9 @@
 .ProjectCard {
   width: 90%;
-  background-color: #0f4c75;
+  /* background-color: #0f4c75; */
   margin: 10px 0;
   border-radius: 10px;
-  color: #bbe1fa;
+  /* color: #bbe1fa; */
   /* box-shadow: #c3c3c3 2px 2px 2px 1px; */
   border: 1px solid #c3c3c3;
   transition: all 0.3s ease-out;
@@ -35,7 +35,7 @@
 }
 
 .srcCodeBtn {
-  color: #bbe1fa;
+  /* color: #bbe1fa; */
   border: 1px solid #bbe1fa;
   border-radius: 5px;
   background-color: inherit;
@@ -46,14 +46,14 @@
 
 .srcCodeBtn:hover {
   border: 1px solid #1b262c;
-  color: #1b262c;
+  /* color: #1b262c; */
   cursor: pointer;
 }
 
 .srcCodeBtn:focus {
   outline: none;
   border: 1px solid #1b262c;
-  color: #1b262c;
+  /* color: #1b262c; */
   transform: scale(0.9);
 }
 

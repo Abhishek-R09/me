@@ -1,4 +1,5 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import classes from './projects.module.css';
 import ProjectCard from './ProjectCard';
 // import pharmacyImg from "../../../public/images/pharmacyProjImg.jpg";
@@ -42,24 +43,39 @@ const projects = [
   },
 ];
 
-const Projects = () => (
-  <section id="projects" className={classes.projects}>
-    <h2>Projects</h2>
-    <div className={classes.projectsSection}>
-      {projects.map((project) => (
-        <div key={project.projName}>
-          <ProjectCard
-            projName={project.projName}
-            type={project.type}
-            projDesc={project.projDesc}
-            imgUrl={project.imgUrl}
-            imgTitle={project.imgTitle}
-            projLink={project.projLink}
-          />
-        </div>
-      ))}
-    </div>
-  </section>
-);
+const useStyles = makeStyles((theme) => ({
+  projects: {
+    backgroundColor: theme.palette.primary.card,
+    '& h2': {
+      color: theme.palette.primary.fontColor2,
+    },
+  },
+}));
+
+const Projects = () => {
+  const localClasses = useStyles();
+  return (
+    <section
+      id="projects"
+      className={`${classes.projects} ${localClasses.projects}`}
+    >
+      <h2>Projects</h2>
+      <div className={classes.projectsSection}>
+        {projects.map((project) => (
+          <div key={project.projName}>
+            <ProjectCard
+              projName={project.projName}
+              type={project.type}
+              projDesc={project.projDesc}
+              imgUrl={project.imgUrl}
+              imgTitle={project.imgTitle}
+              projLink={project.projLink}
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Projects;
