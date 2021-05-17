@@ -29,7 +29,7 @@ const Home = () => (
       />
       <meta
         property="og:image"
-        content="/static/images/marten-bjork-aTt_rNa3gmM-unsplash_edited.jpg"
+        content="/static/images/introBgPresentation.jpg"
       />
       <meta
         property="og:image:alt"
@@ -48,7 +48,7 @@ const Home = () => (
       />
       <meta
         property="twitter:image"
-        content="/static/images/marten-bjork-aTt_rNa3gmM-unsplash_edited.jpg"
+        content="/static/images/introBgPresentation.jpg"
       />
       <meta
         property="twitter:image:alt"
