@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { faReact, faNode } from '@fortawesome/free-brands-svg-icons';
 import SkillCard from './SkillCard';
-import classes from './Skills.module.css';
+// import ProficiencyGraph from './ProficiencyGraph/ProficiencyGraph';
 
 const skills = [
   {
@@ -61,6 +61,7 @@ const Skills = () => {
             </Grid>
           ))}
         </Grid>
+        {/* <ProficiencyGraph /> */}
       </section>
     </>
   );

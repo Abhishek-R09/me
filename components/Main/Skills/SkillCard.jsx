@@ -7,14 +7,11 @@ import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    // boxShadow: '#0c0c0c 4px 4px 2px 0px',
     boxShadow: '#0c0c0c 2px 5px 8px 4px',
     width: '100%',
     margin: 'auto',
     height: '100%',
     '&.MuiPaper-root': {
-      // backgroundColor: '#0f4c75',
-      // backgroundColor: '#303030',
       backgroundColor: theme.palette.primary.card,
     },
   },
@@ -29,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: 'Open Sans',
     },
     '& div': {
-      width: '2.5em',
+      width: '3.5em',
       height: '70px',
       display: 'flex',
     },
@@ -40,12 +37,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SkillCard = ({ icon, name, content }) => {
+const SkillCard = ({ icon, name, content, color }) => {
   const classes = useStyles();
   return (
     <Card className={classes.card}>
       <CardContent className={classes.cardContent}>
-        <div>{icon}</div>
+        <div style={{ color }}>{icon}</div>
         <Typography gutterBottom variant="h5" component="h5" align="center">
           {name}
         </Typography>
@@ -60,6 +57,7 @@ const SkillCard = ({ icon, name, content }) => {
 SkillCard.propTypes = {
   name: PropTypes.string.isRequired,
   icon: PropTypes.element.isRequired,
+  color: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
 };
 

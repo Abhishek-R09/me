@@ -41,7 +41,7 @@ const About = () => {
       <h2>About</h2>
       <div className={classes.aboutImg}>
         <Image
-          src="/static/images/about-img-edited.jpg"
+          src="/static/images/my-image.jpg"
           alt="My image"
           layout="fill"
           objectFit="cover"

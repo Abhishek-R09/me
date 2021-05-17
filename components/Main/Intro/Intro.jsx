@@ -9,11 +9,13 @@ const Intro = () => {
     <div>
       <div className={classes.introImg}>
         <Image
-          src="/static/images/marten-bjork-aTt_rNa3gmM-unsplash_edited.jpg"
+          src="/static/images/introBgPresentation.jpg"
           alt="Presentation"
           layout="fill"
           objectFit="cover"
           objectPosition="center"
+          priority
+          quality={50}
         />
         <div className={classes.introContent}>
           <h1>

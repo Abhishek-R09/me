@@ -14,23 +14,17 @@ import classes from './projectCard.module.css';
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    // boxShadow: '#0c0c0c 4px 4px 2px 0px',
     boxShadow: '#0c0c0c 2px 5px 8px 4px',
     width: '100%',
-    // margin: 'auto',
     height: '100%',
     margin: '20px 0',
     borderRadius: '10px',
-    // color: '#bbe1fa',
     color: theme.palette.primary.fontColor1,
     '&.MuiPaper-root': {
-      // backgroundColor: '#0f4c75',
-      // backgroundColor: '#303030',
       backgroundColor: theme.palette.primary.card,
     },
   },
   header: {
-    // textAlign: 'center',
     padding: '16px',
     '& .MuiCardHeader-title': {
       fontSize: '1.3em',
@@ -40,16 +34,13 @@ const useStyles = makeStyles((theme) => ({
     '& .MuiCardHeader-subheader': {
       fontSize: '0.8em',
       margin: '5px',
-      // color: '#bbe1fa',
       color: theme.palette.primary.fontColor1,
     },
   },
   cardActions: {
     padding: '0 16px 16px',
-    // display: flex;
     flexFlow: 'row',
     justifyContent: 'space-between',
-    // alignItems: 'center',
   },
   srcCodeBtn: {
     color: theme.palette.primary.fontColor1,
@@ -64,11 +55,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cardContent: {
-    // color: '#bbe1fa',
     color: theme.palette.primary.fontColor1,
     padding: '0 20px 20px',
     '& p': {
-      // color: '#bbe1fa',
       color: theme.palette.primary.fontColor1,
       fontFamily: 'Open Sans',
     },
@@ -77,17 +66,14 @@ const useStyles = makeStyles((theme) => ({
     transform: 'rotate(0deg)',
     padding: 0,
     marginLeft: 'auto',
-    // color: '#bbe1fa',
     color: theme.palette.primary.fontColor1,
     transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
     '&:hover': {
-      // color: '#1b262c',
       color: theme.palette.primary.fontColor2,
     },
     '&:focus': {
-      // color: '#bbe1fa',
       color: theme.palette.primary.fontColor1,
     },
   },

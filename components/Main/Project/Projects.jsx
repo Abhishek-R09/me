@@ -2,9 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import classes from './projects.module.css';
 import ProjectCard from './ProjectCard';
-// import pharmacyImg from "../../../public/images/pharmacyProjImg.jpg";
-// import todoAppImg from "../../../public/images/todoAppProj.png";
-// import cpuSchedulerProj from "../../../public/images/osVisualizerProj.png";
 
 const projects = [
   {

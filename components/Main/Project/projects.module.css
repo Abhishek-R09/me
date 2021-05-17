@@ -1,5 +1,4 @@
 .projects {
-  /* padding: 1% 5%; */
   background-color: #303030;
 }
 
@@ -18,20 +17,9 @@
   width: 100%;
 }
 
-@media screen and (min-width: 500px) {
-  .projectsSection > div {
-    /* margin: 0 10px; */
-    /* width: 80%; */
-  }
-}
-
 @media screen and (min-width: 600px) {
   .projectsSection {
     flex-flow: row wrap;
-  }
-  .projectsSection > div {
-    /* margin: 0 10px; */
-    /* width: 48%; */
   }
   .projectsSection > div:nth-child(1) {
     margin-right: 2%;
@@ -42,7 +30,6 @@
     width: 48%;
   }
   .projectsSection > div:nth-child(3) {
-    /* margin-left: 2%; */
     width: 48%;
   }
 }
@@ -64,18 +51,3 @@
     width: 47%;
   }
 }
-
-/* .projectsSection > div {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-} */
-/* .gridItem {
-  width: 80%;
-}
-
-@media screen and (min-width: 600px) {
-  .gridItem {
-    width: auto;
-  }
-} */
