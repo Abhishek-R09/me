@@ -29,31 +29,16 @@ const Home = () => (
       />
       <meta
         property="og:image"
-        content="https://abhishek-r.tech/static/images/introBgPresentation.jpg"
+        content="https://www.abhishekr.dev/static/images/introBgPresentation.jpg"
       />
       <meta
         property="og:image:alt"
         content="A Developer doing coding inside an aeroplane"
       />
-      <meta property="og:image:width" content="600" />
-      <meta property="og:image:height" content="600" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content="@abhishekR_09" />
-      <meta property="twitter:title" content="Check out my website!" />
-      <meta
-        property="twitter:description"
-        content="Portfolio Website of Abhishek Ramasubramanian, 
-                a Computer Science student currently studying in Vellore Institute of Technology, Vellore, 
-                Tamil Nadu, India created using React & Next.js"
-      />
-      <meta
-        property="twitter:image"
-        content="https://abhishek-r.tech/static/images/introBgPresentation.jpg"
-      />
-      <meta
-        property="twitter:image:alt"
-        content="A Developer doing coding inside an aeroplane"
-      />
     </Head>
     <Main />
   </>
