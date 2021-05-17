@@ -29,7 +29,7 @@ const Home = () => (
       />
       <meta
         property="og:image"
-        content="/static/images/introBgPresentation.jpg"
+        content="https://abhishek-r.tech/static/images/introBgPresentation.jpg"
       />
       <meta
         property="og:image:alt"
@@ -48,7 +48,7 @@ const Home = () => (
       />
       <meta
         property="twitter:image"
-        content="/static/images/introBgPresentation.jpg"
+        content="https://abhishek-r.tech/static/images/introBgPresentation.jpg"
       />
       <meta
         property="twitter:image:alt"
