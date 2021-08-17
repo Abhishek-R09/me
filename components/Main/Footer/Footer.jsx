@@ -1,11 +1,12 @@
 import React from 'react';
-import Tooltip from '@material-ui/core/Tooltip';
-import Zoom from '@material-ui/core/Zoom';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import EmailIcon from '@material-ui/icons/Email';
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import { Tooltip, Zoom } from '@material-ui/core';
+import {
+  GitHub as GitHubIcon,
+  Twitter as TwitterIcon,
+  LinkedIn as LinkedInIcon,
+  Email as EmailIcon,
+  ArrowForward as ArrowForwardIcon,
+} from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 import classes from './footer.module.css';
 

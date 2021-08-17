@@ -1,14 +1,15 @@
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
-import { makeStyles } from '@material-ui/core/styles';
-import Tooltip from '@material-ui/core/Tooltip';
-import Zoom from '@material-ui/core/Zoom';
-import PersonIcon from '@material-ui/icons/Person';
-import SchoolIcon from '@material-ui/icons/School';
-import WorkIcon from '@material-ui/icons/Work';
-import BuildIcon from '@material-ui/icons/Build';
-import Brightness3Icon from '@material-ui/icons/Brightness3';
-import BrightnessHighIcon from '@material-ui/icons/BrightnessHigh';
 import { useEffect, useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { Tooltip, Zoom } from '@material-ui/core';
+import {
+  Person as PersonIcon,
+  School as SchoolIcon,
+  Work as WorkIcon,
+  Build as BuildIcon,
+  Brightness3 as Brightness3Icon,
+  BrightnessHigh as BrightnessHighIcon,
+} from '@material-ui/icons';
 import PropTypes from 'prop-types';
 import classes from './Navigation.module.css';
 import useLoaded from '../../hooks/use-loaded';

@@ -1,17 +1,20 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  CardActions,
+  CardHeader,
+  Typography,
+  IconButton,
+  Collapse,
+  Tooltip,
+  Zoom,
+} from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Collapse from '@material-ui/core/Collapse';
-import Tooltip from '@material-ui/core/Tooltip';
-import Zoom from '@material-ui/core/Zoom';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import { CardActions, CardHeader } from '@material-ui/core';
 import classes from './projectCard.module.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -127,9 +130,7 @@ function ProjectCard({ imgUrl, imgTitle, projName, type, projLink, projDesc }) {
         </a>
         <Tooltip
           TransitionComponent={Zoom}
-          title={`${expanded ? 'Collapse' : 'Expand'} to ${
-            expanded ? 'hide' : 'see'
-          } description
+          title={`Click to ${expanded ? 'hide' : 'see'} description
           `}
           arrow
         >
