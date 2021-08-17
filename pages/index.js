@@ -17,7 +17,7 @@ const Home = () => (
         name="description"
         content="Portfolio Website of Abhishek Ramasubramanian, 
                 a Computer Science student currently studying in Vellore Institute of Technology, Vellore, 
-                Tamil Nadu, India created using React"
+                Tamil Nadu, India. He's passionate about web development and cloud computing"
       />
       <meta property="og:type" content="summary" />
       <meta property="og:title" content="Check out my website!" />
@@ -25,7 +25,7 @@ const Home = () => (
         property="og:description"
         content="Portfolio Website of Abhishek Ramasubramanian, 
                 a Computer Science student currently studying in Vellore Institute of Technology, Vellore, 
-                Tamil Nadu, India created using React & Next.js"
+                Tamil Nadu, India. He's passionate about web development and cloud computing."
       />
       <meta
         property="og:image"

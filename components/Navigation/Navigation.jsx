@@ -54,15 +54,17 @@ const useStyles = makeStyles((theme) => ({
   },
   themeToggleBtn: {
     color: theme.palette.primary.fontColor1,
-    backgroundColor: theme.palette.primary.card,
-    boxShadow: '#0c0c0c 2px 4px 2px 0px',
+    backgroundColor: theme.palette.primary.secondary,
+    // boxShadow: '#0c0c0c 2px 4px 2px 0px',
+    // boxShadow: `${theme.palette.primary.cardShadow} 2px 2px 6px 2px`,
     '&:hover': {
       color: theme.palette.primary.fontColor2,
     },
     '@media screen and (max-width: 768px)': {
       backgroundColor: theme.palette.primary.nav,
-      border: `2px solid ${theme.palette.primary.card}`,
-      boxShadow: '#0c0c0c 2px 4px 2px 0px',
+      border: `3px solid ${theme.palette.primary.primary}`,
+      // boxShadow: '#0c0c0c 2px 4px 2px 0px',
+      boxShadow: `inset ${theme.palette.primary.cardShadow} 0px 0px 2px 2px`,
     },
   },
 }));

@@ -1,6 +1,6 @@
 .footer {
   margin-bottom: 85px;
-  padding: 5% 5% 0;
+  padding: 3% 5% 0;
   text-align: center;
 }
 
@@ -72,7 +72,7 @@
 
 @media screen and (min-width: 769px) {
   .footer {
-    margin-bottom: 5%;
+    margin-bottom: 3%;
   }
 
   .contact {

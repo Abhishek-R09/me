@@ -11,6 +11,10 @@
   position: relative;
 }
 
+.aboutImg img {
+  border-radius: 10px;
+}
+
 .aboutContent {
   display: inline-block;
   text-align: justify;

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { faReact, faNode } from '@fortawesome/free-brands-svg-icons';
 import SkillCard from './SkillCard';
-// import ProficiencyGraph from './ProficiencyGraph/ProficiencyGraph';
+import ProficiencyGraph from './ProficiencyGraph/ProficiencyGraph';
 
 const skills = [
   {
@@ -36,9 +36,27 @@ const skills = [
 
 const useStyles = makeStyles((theme) => ({
   skills: {
-    backgroundColor: theme.palette.primary.card,
+    // backgroundColor: theme.palette.primary.card,
+    backgroundColor: theme.palette.primary.secondary,
     '& h2': {
       color: theme.palette.primary.fontColor2,
+    },
+  },
+  container: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
+    alignItems: 'center',
+    '@media (max-width: 960px)': {
+      flexFlow: 'column',
+    },
+  },
+  skillsGrid: {
+    width: '40%',
+    marginRight: '10px',
+    '@media (max-width: 960px)': {
+      width: 'fit-content',
+      margin: 'auto',
     },
   },
 }));
@@ -49,19 +67,26 @@ const Skills = () => {
     <>
       <section id="skills" className={localClasses.skills}>
         <h2>Skills</h2>
-        <Grid container spacing={3} justify="center">
-          {skills.map((skill) => (
-            <Grid item xs={12} sm={6} md={4} key={skill.name}>
-              <SkillCard
-                name={skill.name}
-                icon={skill.icon}
-                color={skill.color}
-                content={skill.content}
-              />
-            </Grid>
-          ))}
-        </Grid>
-        {/* <ProficiencyGraph /> */}
+        <div className={localClasses.container}>
+          <Grid
+            container
+            spacing={3}
+            justify="center"
+            className={localClasses.skillsGrid}
+          >
+            {skills.map((skill) => (
+              <Grid item xs={12} sm={6} md={12} key={skill.name}>
+                <SkillCard
+                  name={skill.name}
+                  icon={skill.icon}
+                  color={skill.color}
+                  content={skill.content}
+                />
+              </Grid>
+            ))}
+          </Grid>
+          <ProficiencyGraph />
+        </div>
       </section>
     </>
   );

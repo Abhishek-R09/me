@@ -22,8 +22,8 @@ const useStyles = makeStyles((theme) => ({
   oppositeContent: {
     flex: '0',
     padding: '0',
-    '@media (min-width: 600px)': {
-      flex: '0.2',
+    '@media (max-width: 900px)': {
+      // flex: '0.2',
     },
   },
   timelineContent: {
@@ -33,23 +33,30 @@ const useStyles = makeStyles((theme) => ({
   paperStyle: {
     padding: '15px',
     color: theme.palette.primary.fontColor1,
-    width: '100%',
-    boxShadow: '#0c0c0c 2px 5px 8px 4px',
+    // width: '100%',
+    // boxShadow: '#0c0c0c 2px 5px 8px 4px',
+    boxShadow: `${theme.palette.primary.cardShadow} 2px 2px 6px 2px`,
     '&.MuiPaper-root': {
-      backgroundColor: theme.palette.primary.card,
-      height: '80%',
+      // backgroundColor: theme.palette.primary.card,
+      backgroundColor: theme.palette.primary.primary,
+      height: '90%',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
     },
-    '@media (min-width: 1024px)': {
-      width: '500px',
+    // width: '400px',
+    width: 'auto',
+    '@media (max-width: 768px)': {
+      width: '100%',
     },
+    // '@media (max-width: 600px)': {
+    //   width: '100%',
+    // },
   },
   timeLineType: {
     fontSize: '1rem',
     '@media (min-width: 600px)': {
-      fontSize: '1.3rem',
+      fontSize: '1.2rem',
     },
   },
   instituteNameStyle: {
@@ -57,14 +64,14 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '0.7rem',
     fontFamily: 'Open Sans',
     '@media (min-width: 600px)': {
-      fontSize: '1rem',
+      fontSize: '0.8rem',
     },
   },
   yearStyle: {
     fontSize: '0.7rem',
     fontFamily: 'Open Sans',
     '@media (min-width: 600px)': {
-      fontSize: '1rem',
+      fontSize: '0.8rem',
     },
   },
 }));

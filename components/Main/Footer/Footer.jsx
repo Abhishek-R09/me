@@ -1,4 +1,6 @@
 import React from 'react';
+import Tooltip from '@material-ui/core/Tooltip';
+import Zoom from '@material-ui/core/Zoom';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -27,6 +29,10 @@ const useStyles = makeStyles((theme) => ({
   githubColor: {
     color: theme.palette.type === 'light' ? '#000000' : '#FFFFFF',
   },
+  credits: {
+    color: theme.palette.primary.fontColor2,
+    textDecoration: 'none',
+  },
 }));
 
 const Footer = () => {
@@ -42,52 +48,88 @@ const Footer = () => {
         </span>
         <ul className={classes.contactsUl}>
           <li>
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=0901abhishek.r@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Mail to Abhishek Ramasubramanian"
-              style={{ color: '#E94034' }}
+            <Tooltip
+              TransitionComponent={Zoom}
+              title="Mail to Abhishek Ramasubramanian"
+              arrow
             >
-              <EmailIcon style={{ fontSize: 30 }} />
-            </a>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=0901abhishek.r@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mail to Abhishek Ramasubramanian"
+                style={{ color: '#E94034' }}
+              >
+                <EmailIcon style={{ fontSize: 30 }} />
+              </a>
+            </Tooltip>
           </li>
           <li>
-            <a
-              href="https://www.linkedin.com/in/abhishek-ramasubramanian-74b2941a3/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Reach Abhishek Ramasubramanian on LinkedIn"
-              style={{ color: '#0A66C2' }}
+            <Tooltip
+              TransitionComponent={Zoom}
+              title="Reach Abhishek Ramasubramanian on LinkedIn"
+              arrow
             >
-              <LinkedInIcon style={{ fontSize: 30 }} />
-            </a>
+              <a
+                href="https://www.linkedin.com/in/abhishek-ramasubramanian-74b2941a3/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Reach Abhishek Ramasubramanian on LinkedIn"
+                style={{ color: '#0A66C2' }}
+              >
+                <LinkedInIcon style={{ fontSize: 30 }} />
+              </a>
+            </Tooltip>
           </li>
           <li>
-            <a
-              href="https://github.com/Abhishek911cse"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Reach Abhishek Ramasubramanian on GitHub"
-              className={localClasses.githubColor}
+            <Tooltip
+              TransitionComponent={Zoom}
+              title="Reach Abhishek Ramasubramanian on GitHub"
+              arrow
             >
-              <GitHubIcon style={{ fontSize: 30 }} />
-            </a>
+              <a
+                href="https://github.com/Abhishek911cse"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Reach Abhishek Ramasubramanian on GitHub"
+                className={localClasses.githubColor}
+              >
+                <GitHubIcon style={{ fontSize: 30 }} />
+              </a>
+            </Tooltip>
           </li>
           <li>
-            <a
-              href="https://twitter.com/abhishekR_09"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Reach Abhishek Ramasubramanian on Twitter"
-              style={{ color: '#1DA1F2' }}
+            <Tooltip
+              TransitionComponent={Zoom}
+              title="Reach Abhishek Ramasubramanian on Twitter"
+              arrow
             >
-              <TwitterIcon style={{ fontSize: 30 }} />
-            </a>
+              <a
+                href="https://twitter.com/abhishekR_09"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Reach Abhishek Ramasubramanian on Twitter"
+                style={{ color: '#1DA1F2' }}
+              >
+                <TwitterIcon style={{ fontSize: 30 }} />
+              </a>
+            </Tooltip>
           </li>
         </ul>
       </div>
       {/* <small>Feel free to contact me 🙂</small>{' '} */}
+      <small>
+        Credits to{' '}
+        <a
+          className={localClasses.credits}
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://unsplash.com/@martenbjork"
+        >
+          Marten Bjork
+        </a>{' '}
+        for the intro image
+      </small>
     </footer>
   );
 };

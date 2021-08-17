@@ -42,7 +42,8 @@ const projects = [
 
 const useStyles = makeStyles((theme) => ({
   projects: {
-    backgroundColor: theme.palette.primary.card,
+    // backgroundColor: theme.palette.primary.card,
+    backgroundColor: theme.palette.primary.secondary,
     '& h2': {
       color: theme.palette.primary.fontColor2,
     },

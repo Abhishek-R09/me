@@ -12,12 +12,12 @@
 
 .name,
 .name.active {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: 'Montserrat', sans-serif;
 }
 
 .desktopNav.active {
-  box-shadow: #0c0c0c 0px 5px 8px 4px;
+  box-shadow: #0c0c0c 0px 3px 7px 0px;
 }
 
 .linksList {
@@ -50,7 +50,7 @@
   padding: 10px 0;
   background-color: transparent;
   border: 0;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   cursor: pointer;
   border-bottom: 1px hidden white;
   transition: all 0.1s ease;
@@ -85,13 +85,13 @@
 }
 
 .themeToggleBtn:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .linkBtn:hover {
+  /* .linkBtn:hover {
     transform: scale(1.1);
-  }
+  } */
   .linkBtn:hover + span {
     width: 100%;
   }
@@ -104,7 +104,7 @@
 @media screen and (max-width: 1280px) {
   .name,
   .name.active {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .linkBtn {
     width: 100px;
@@ -113,13 +113,16 @@
 }
 
 @media screen and (max-width: 900px) {
-  .name,
+  /* .name,
   .name.active {
     font-size: 1rem;
     width: min-content;
-  }
-  .linksList li {
+  } */
+  /* .linksList li {
     padding: 5px;
+  } */
+  .desktopNav {
+    padding: 0;
   }
   .linkBtn {
     width: 100px;
@@ -151,6 +154,8 @@
   }
   .linkBtn {
     width: 100px;
+    margin: 5px 0;
+    padding: 10px 0;
   }
   .linkBtn span {
     display: none;

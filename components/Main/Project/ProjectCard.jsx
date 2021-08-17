@@ -7,6 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
+import Tooltip from '@material-ui/core/Tooltip';
+import Zoom from '@material-ui/core/Zoom';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 import { CardActions, CardHeader } from '@material-ui/core';
@@ -14,14 +16,16 @@ import classes from './projectCard.module.css';
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    boxShadow: '#0c0c0c 2px 5px 8px 4px',
+    // boxShadow: '#0c0c0c 2px 2px 6px 2px',
+    boxShadow: `${theme.palette.primary.cardShadow} 2px 2px 6px 2px`,
     width: '100%',
     height: '100%',
     margin: '20px 0',
     borderRadius: '10px',
     color: theme.palette.primary.fontColor1,
     '&.MuiPaper-root': {
-      backgroundColor: theme.palette.primary.card,
+      // backgroundColor: theme.palette.primary.card,
+      backgroundColor: theme.palette.primary.secondary,
     },
   },
   header: {
@@ -97,6 +101,7 @@ function ProjectCard({ imgUrl, imgTitle, projName, type, projLink, projDesc }) {
         <Image
           src={`${imgUrl}`}
           alt={imgTitle}
+          title={imgTitle}
           layout="fill"
           objectFit="cover"
           objectPosition="0 0"
@@ -120,18 +125,33 @@ function ProjectCard({ imgUrl, imgTitle, projName, type, projLink, projDesc }) {
             Source Code
           </button>
         </a>
-        <IconButton
-          className={`${localClasses.expand} ${
-            expanded ? localClasses.expandOpen : null
-          }`}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
+        <Tooltip
+          TransitionComponent={Zoom}
+          title={`${expanded ? 'Collapse' : 'Expand'} to ${
+            expanded ? 'hide' : 'see'
+          } description
+          `}
+          arrow
         >
-          <ExpandMoreIcon />
-        </IconButton>
+          <IconButton
+            className={`${localClasses.expand} ${
+              expanded ? localClasses.expandOpen : null
+            }`}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label={`${expanded ? 'show description' : 'hide description'}`}
+          >
+            <ExpandMoreIcon />
+          </IconButton>
+        </Tooltip>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" mountOnEnter unmountOnExit>
+      <Collapse
+        aria-expanded={expanded}
+        in={expanded}
+        timeout="auto"
+        mountOnEnter
+        unmountOnExit
+      >
         <CardContent className={localClasses.cardContent}>
           <Typography variant="body2" color="textSecondary" component="p">
             {projDesc}
