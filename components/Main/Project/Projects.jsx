@@ -13,7 +13,7 @@ const projects = [
             associated content and a timestamp.`,
     imgUrl: '/static/images/todoAppProj.png',
     imgTitle: 'Home page of Task App',
-    projLink: 'https://github.com/Abhishek911cse/Todo-List-App-React.git',
+    projLink: 'https://github.com/Abhishek-R09/Todo-List-App-React',
   },
   {
     projName: 'CPU Scheduling Visualizer',
@@ -23,8 +23,7 @@ const projects = [
             and make it easy to understand. The app was made in collaboration with my classmates.`,
     imgUrl: '/static/images/osVisualizerProj.png',
     imgTitle: 'Sample CPU Scheduling Visualizer',
-    projLink:
-      'https://github.com/Siddharth-Gandhi/CPU-Scheduling-Visualizer.git',
+    projLink: 'https://github.com/Siddharth-Gandhi/CPU-Scheduling-Visualizer',
   },
   {
     projName: 'Pharmacy System',
@@ -35,8 +34,7 @@ const projects = [
              of employees with proper authentication.`,
     imgUrl: '/static/images/pharmacyProjImg.jpg',
     imgTitle: 'Home page of Pharmacy Management System',
-    projLink:
-      'https://github.com/Abhishek911cse/Pharmacy-Management-System.git',
+    projLink: 'https://github.com/Abhishek-R09/Pharmacy-Management-System',
   },
 ];
 

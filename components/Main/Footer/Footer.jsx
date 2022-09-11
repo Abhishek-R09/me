@@ -55,7 +55,7 @@ const Footer = () => {
               arrow
             >
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=0901abhishek.r@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=abhishek.ram0901@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Mail to Abhishek Ramasubramanian"
@@ -72,7 +72,7 @@ const Footer = () => {
               arrow
             >
               <a
-                href="https://www.linkedin.com/in/abhishek-ramasubramanian-74b2941a3/"
+                href="https://www.linkedin.com/in/abhishek-ramasubramanian/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Reach Abhishek Ramasubramanian on LinkedIn"
@@ -89,7 +89,7 @@ const Footer = () => {
               arrow
             >
               <a
-                href="https://github.com/Abhishek911cse"
+                href="https://github.com/Abhishek-R09"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Reach Abhishek Ramasubramanian on GitHub"
@@ -119,7 +119,7 @@ const Footer = () => {
         </ul>
       </div>
       {/* <small>Feel free to contact me 🙂</small>{' '} */}
-      <small>
+      {/* <small>
         Credits to{' '}
         <a
           className={localClasses.credits}
@@ -130,7 +130,7 @@ const Footer = () => {
           Marten Bjork
         </a>{' '}
         for the intro image
-      </small>
+      </small> */}
     </footer>
   );
 };
