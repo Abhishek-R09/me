@@ -1,6 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import classes from './projects.module.css';
 import ProjectCard from './ProjectCard';
 
 const projects = [
@@ -38,38 +36,25 @@ const projects = [
   },
 ];
 
-const useStyles = makeStyles((theme) => ({
-  projects: {
-    // backgroundColor: theme.palette.primary.card,
-    backgroundColor: theme.palette.primary.secondary,
-    '& h2': {
-      color: theme.palette.primary.fontColor2,
-    },
-  },
-}));
-
 const Projects = () => {
-  const localClasses = useStyles();
   return (
-    <section
-      id="projects"
-      className={`${classes.projects} ${localClasses.projects}`}
-    >
-      <h2>Projects</h2>
-      <div className={classes.projectsSection}>
+    <section id="projects" className="mb-20 min-h-screen">
+      <h2 className="relative mb-10 flex w-full items-center text-xl font-bold text-slate-300 before:relative before:mr-3 before:h-px before:w-full before:bg-emerald-300 after:relative after:ml-3 after:h-px after:w-full after:bg-emerald-300">
+        Projects
+      </h2>
+      <ul className="list-none">
         {projects.map((project) => (
-          <div key={project.projName}>
-            <ProjectCard
-              projName={project.projName}
-              type={project.type}
-              projDesc={project.projDesc}
-              imgUrl={project.imgUrl}
-              imgTitle={project.imgTitle}
-              projLink={project.projLink}
-            />
-          </div>
+          <ProjectCard
+            key={project.projName}
+            projName={project.projName}
+            type={project.type}
+            projDesc={project.projDesc}
+            imgUrl={project.imgUrl}
+            imgTitle={project.imgTitle}
+            projLink={project.projLink}
+          />
         ))}
-      </div>
+      </ul>
     </section>
   );
 };

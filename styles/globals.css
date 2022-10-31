@@ -1,18 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap'); */
 
 /* Styles for plain/common HTML tags*/
-* {
+/* * {
   box-sizing: border-box;
 }
-
+*/
 body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
 }
 
+::-webkit-scrollbar-track {
+  background: rgb(15 23 42);
+  opacity: 10;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #495670;
+  border: 3px solid rgb(15 23 42);
+  /* border-right: 3px solid #0a192f; */
+  /* padding-right: 2px; */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/*
 h1,
 h2,
 h3,
@@ -59,11 +81,11 @@ section {
   border: 0;
   border-top: 2px solid;
   width: 70%;
-}
+} */
 
 /* Styles for Navigation bar */
 
-.nav-links {
+/* .nav-links {
   display: flex;
   align-items: center;
   padding-inline-start: 0;
@@ -81,11 +103,11 @@ section {
 
 .nav-links a:hover {
   color: #0f4c75;
-}
+} */
 
 /* Styles for "Timeline" section */
 
-.paperRight {
+/* .paperRight {
   padding: 6px 16px;
   width: fit-content;
 }
@@ -94,4 +116,4 @@ section {
   padding: 6px 16px;
   width: fit-content;
   float: right;
-}
+} */

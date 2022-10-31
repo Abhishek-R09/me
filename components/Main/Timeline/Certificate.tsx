@@ -1,39 +1,39 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 import CertificateItem from './CertificateItem';
 
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-    margin: '15px auto',
-    '& iframe': {
-      width: '100% !important',
-      '& body': {
-        border: '0',
-      },
-    },
-  },
-  media: {
-    height: 150,
-    width: 150,
-    margin: 'auto',
-  },
-  certificate: {
-    width: '100%',
-    // display: 'flex',
-    // flexDirection: 'row',
-    // flexWrap: 'wrap',
-    // alignItems: 'flex-start',
-    height: 'fit-content',
-    // '@media (max-width: 1280px)': {
-    //   flexDirection: 'column',
-    //   flexWrap: 'nowrap',
-    // },
-    display: 'grid',
-    gridTemplateColumns: 'auto auto auto',
-    gridTemplateRows: 'auto auto auto',
-  },
-});
+// const useStyles = makeStyles({
+//   root: {
+//     maxWidth: 345,
+//     margin: '15px auto',
+//     '& iframe': {
+//       width: '100% !important',
+//       '& body': {
+//         border: '0',
+//       },
+//     },
+//   },
+//   media: {
+//     height: 150,
+//     width: 150,
+//     margin: 'auto',
+//   },
+//   certificate: {
+//     width: '100%',
+//     // display: 'flex',
+//     // flexDirection: 'row',
+//     // flexWrap: 'wrap',
+//     // alignItems: 'flex-start',
+//     height: 'fit-content',
+//     // '@media (max-width: 1280px)': {
+//     //   flexDirection: 'column',
+//     //   flexWrap: 'nowrap',
+//     // },
+//     display: 'grid',
+//     gridTemplateColumns: 'auto auto auto',
+//     gridTemplateRows: 'auto auto auto',
+//   },
+// });
 
 const Certificate = () => {
   const classes = useStyles();

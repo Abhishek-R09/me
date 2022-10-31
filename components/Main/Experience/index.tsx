@@ -1,11 +1,8 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { faReact, faNode } from '@fortawesome/free-brands-svg-icons';
 import SkillCard from './SkillCard';
-import ProficiencyGraph from './ProficiencyGraph/ProficiencyGraph';
 
 const skills = [
   {
@@ -34,62 +31,16 @@ const skills = [
   },
 ];
 
-const useStyles = makeStyles((theme) => ({
-  skills: {
-    // backgroundColor: theme.palette.primary.card,
-    backgroundColor: theme.palette.primary.secondary,
-    '& h2': {
-      color: theme.palette.primary.fontColor2,
-    },
-  },
-  container: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'nowrap',
-    alignItems: 'center',
-    '@media (max-width: 960px)': {
-      flexFlow: 'column',
-    },
-  },
-  skillsGrid: {
-    width: '40%',
-    marginRight: '10px',
-    '@media (max-width: 960px)': {
-      width: 'fit-content',
-      margin: 'auto',
-    },
-  },
-}));
-
-const Skills = () => {
-  const localClasses = useStyles();
+const Experience = () => {
   return (
     <>
-      <section id="skills" className={localClasses.skills}>
-        <h2>Skills</h2>
-        <div className={localClasses.container}>
-          <Grid
-            container
-            spacing={3}
-            justify="center"
-            className={localClasses.skillsGrid}
-          >
-            {skills.map((skill) => (
-              <Grid item xs={12} sm={6} md={12} key={skill.name}>
-                <SkillCard
-                  name={skill.name}
-                  icon={skill.icon}
-                  color={skill.color}
-                  content={skill.content}
-                />
-              </Grid>
-            ))}
-          </Grid>
-          <ProficiencyGraph />
-        </div>
+      <section id="experience" className="mb-20 min-h-screen">
+        <h2 className="relative mb-3 flex w-full items-center text-xl font-bold text-slate-300 before:relative before:mr-3 before:h-px before:w-full before:bg-emerald-300 after:relative after:ml-3 after:h-px after:w-full after:bg-emerald-300">
+          Experience
+        </h2>
       </section>
     </>
   );
 };
 
-export default Skills;
+export default Experience;

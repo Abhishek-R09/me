@@ -1,36 +1,36 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Timeline from '@material-ui/lab/Timeline';
+// import { makeStyles, useTheme } from '@material-ui/core/styles';
+// import Timeline from '@material-ui/lab/Timeline';
 import TimeLineItem from './TimeLineItem';
 import Certificate from './Certificate';
 
-const useStyles = makeStyles((theme) => ({
-  timeline: {
-    padding: 0,
-    // width: 'fit-content',
-    width: '60%',
-    '& h2': {
-      color: theme.palette.primary.fontColor2,
-    },
-    '@media (max-width: 1280px)': {
-      width: '100%',
-    },
-    // '@media (max-width: 900px)': {
-    //   width: '100%',
-    // },
-  },
-  title: {
-    color: theme.palette.primary.fontColor2,
-  },
-  container: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'nowrap',
-    '@media (max-width: 768px)': {
-      flexFlow: 'column',
-    },
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   timeline: {
+//     padding: 0,
+//     // width: 'fit-content',
+//     width: '60%',
+//     '& h2': {
+//       color: theme.palette.primary.fontColor2,
+//     },
+//     '@media (max-width: 1280px)': {
+//       width: '100%',
+//     },
+//     // '@media (max-width: 900px)': {
+//     //   width: '100%',
+//     // },
+//   },
+//   title: {
+//     color: theme.palette.primary.fontColor2,
+//   },
+//   container: {
+//     display: 'flex',
+//     flexDirection: 'row',
+//     flexWrap: 'nowrap',
+//     '@media (max-width: 768px)': {
+//       flexFlow: 'column',
+//     },
+//   },
+// }));
 
 const Education = () => {
   const localClasses = useStyles();

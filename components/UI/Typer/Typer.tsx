@@ -4,8 +4,11 @@ import classes from './Typer.module.css';
 
 const TYPING_SPEED = 150;
 
-const Typer = (props) => {
-  const { dataText } = props;
+type TyperProps = {
+  dataText: string;
+};
+
+const Typer = ({ dataText }: TyperProps) => {
   const [text, setText] = useState('');
 
   const handleType = () => {
