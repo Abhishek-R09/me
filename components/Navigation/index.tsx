@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
-import ActiveLink from './ActiveLink';
 // import { useEffect, useState } from 'react';
 // import { makeStyles } from '@material-ui/core/styles';
 // import { Tooltip, Zoom } from '@material-ui/core';
@@ -284,49 +283,12 @@ import ActiveLink from './ActiveLink';
 
 // export default Navigation;
 
-// const people = [
-//   {
-//     name: 'Calvin Hawkins',
-//     email: 'calvin.hawkins@example.com',
-//     image:
-//       'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-//   },
-//   {
-//     name: 'Kristen Ramos',
-//     email: 'kristen.ramos@example.com',
-//     image:
-//       'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-//   },
-//   {
-//     name: 'Ted Fox',
-//     email: 'ted.fox@example.com',
-//     image:
-//       'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-//   },
-// ]
-
-// export default function Example() {
-//   return (
-//     <ul className="divide-y divide-gray-200">
-//       {people.map((person) => (
-//         <li key={person.email} className="py-4 flex">
-//           <img className="h-10 w-10 rounded-full" src={person.image} alt="" />
-//           <div className="ml-3">
-//             <p className="text-sm font-medium text-gray-900">{person.name}</p>
-//             <p className="text-sm text-gray-500">{person.email}</p>
-//           </div>
-//         </li>
-//       ))}
-//     </ul>
-//   )
-// }
-
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+import { Disclosure, Transition } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import DesktopNavigationLink from './DesktopNavigationLink';
 import MobileNavigationLink from './MobileNavLink';
-import { Fragment } from 'react';
+import whiteLogo from '../../public/static/svg/logo-color.svg';
+import Image from 'next/image';
 
 const navigation = [
   { name: 'About', href: '/#about' },
@@ -343,7 +305,6 @@ const NavigationBar = () => {
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center">
               <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
-                {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -355,14 +316,9 @@ const NavigationBar = () => {
               </div>
               <div className="flex items-center justify-center md:flex-1 md:items-stretch md:justify-between">
                 <div className="flex flex-shrink-0 items-center text-yellow-500 ">
-                  <img
-                    className="block h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
-                  />
-                  {/* <span className="ml-3 hidden sm:inline">
-                    Abhishek Ramasubramanian
-                  </span> */}
+                  <div className="h-8 w-8">
+                    <Image src={whiteLogo} alt="Logo" />
+                  </div>
                 </div>
                 <div className="hidden md:ml-6 md:block">
                   <div className="flex space-x-4">
@@ -376,19 +332,9 @@ const NavigationBar = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
-                  type="button"
-                  className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                >
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
-              </div> */}
             </div>
           </div>
           <Transition
-            // show={open}
             enter="transition duration-100 ease-out"
             enterFrom="transform scale-95 opacity-0"
             enterTo="transform scale-100 opacity-100"

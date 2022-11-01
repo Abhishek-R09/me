@@ -1,4 +1,5 @@
 import React from 'react';
+import MainHeadings from '../../Heading';
 import ProjectCard from './ProjectCard';
 
 const projects = [
@@ -12,6 +13,7 @@ const projects = [
     imgUrl: '/static/images/todoAppProj.png',
     imgTitle: 'Home page of Task App',
     projLink: 'https://github.com/Abhishek-R09/Todo-List-App-React',
+    techUsed: ['ABC', 'DEF'],
   },
   {
     projName: 'CPU Scheduling Visualizer',
@@ -22,6 +24,7 @@ const projects = [
     imgUrl: '/static/images/osVisualizerProj.png',
     imgTitle: 'Sample CPU Scheduling Visualizer',
     projLink: 'https://github.com/Siddharth-Gandhi/CPU-Scheduling-Visualizer',
+    techUsed: ['ABC', 'DEF'],
   },
   {
     projName: 'Pharmacy System',
@@ -33,17 +36,16 @@ const projects = [
     imgUrl: '/static/images/pharmacyProjImg.jpg',
     imgTitle: 'Home page of Pharmacy Management System',
     projLink: 'https://github.com/Abhishek-R09/Pharmacy-Management-System',
+    techUsed: ['ABC', 'DEF', 'GHI'],
   },
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="mb-20 min-h-screen">
-      <h2 className="relative mb-10 flex w-full items-center text-xl font-bold text-slate-300 before:relative before:mr-3 before:h-px before:w-full before:bg-emerald-300 after:relative after:ml-3 after:h-px after:w-full after:bg-emerald-300">
-        Projects
-      </h2>
+    <section id="projects" className="mb-20">
+      <MainHeadings title="Projects" />
       <ul className="list-none">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <ProjectCard
             key={project.projName}
             projName={project.projName}
@@ -52,6 +54,8 @@ const Projects = () => {
             imgUrl={project.imgUrl}
             imgTitle={project.imgTitle}
             projLink={project.projLink}
+            techUsed={project.techUsed}
+            index={index}
           />
         ))}
       </ul>

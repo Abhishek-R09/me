@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { classNames } from '../../helpers/classNames';
+import { RubikRegular } from '../../helpers/fonts';
 
 type DesktopNavigationLinkProps = {
   href: string;
@@ -20,7 +21,8 @@ const DesktopNavigationLink = ({ href, name }: DesktopNavigationLinkProps) => {
           router.pathname == `${href}`
             ? 'bg-gray-900 text-white'
             : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-          'rounded-md px-3 py-2 text-sm font-medium hover:cursor-pointer'
+          'rounded-md px-3 py-2 text-sm font-medium hover:cursor-pointer',
+          RubikRegular.className
         )}
       >
         {name}

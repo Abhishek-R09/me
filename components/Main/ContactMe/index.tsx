@@ -1,142 +1,73 @@
 import React from 'react';
-// import { Tooltip, Zoom } from '@material-ui/core';
-// import {
-//   GitHub as GitHubIcon,
-//   Twitter as TwitterIcon,
-//   LinkedIn as LinkedInIcon,
-//   Email as EmailIcon,
-//   ArrowForward as ArrowForwardIcon,
-// } from '@material-ui/icons';
-// import { makeStyles } from '@material-ui/core/styles';
-import classes from './footer.module.css';
-
-// const useStyles = makeStyles((theme) => ({
-//   footer: {
-//     color: theme.palette.primary.fontColor1,
-//   },
-//   contact: {
-//     '& a svg:hover': {
-//       color: theme.palette.primary.fontColor2,
-//     },
-//   },
-//   contactMe: {
-//     '& span': {
-//       color: theme.palette.primary.fontColor2,
-//       '& svg': {
-//         color: theme.palette.primary.fontColor1,
-//       },
-//     },
-//   },
-//   githubColor: {
-//     color: theme.palette.type === 'light' ? '#000000' : '#FFFFFF',
-//   },
-//   credits: {
-//     color: theme.palette.primary.fontColor2,
-//     textDecoration: 'none',
-//   },
-// }));
+import { classNames } from '../../../helpers/classNames';
+import { jetBrainsMonoRegular, RubikRegular } from '../../../helpers/fonts';
+import MainHeadings from '../../Heading';
+import GitHubLogo from '../../UI/GitHubLogo';
+import LinkedInLogo from '../../UI/LinkedInLogo';
+import TwitterLogo from '../../UI/TwitterLogo';
 
 const ContactMe = () => {
-  // const localClasses = useStyles();
   return (
-    <footer id="contact-me" className="pb-20">
-      <h2 className="mx-0 mb-10 flex w-full grow basis-1/2 items-center text-lg font-bold text-slate-300 before:relative before:mr-3 before:h-px before:w-full before:grow before:basis-1/5 before:bg-emerald-300 after:relative after:ml-3 after:h-px after:w-full after:grow after:basis-1/5 after:bg-emerald-300">
-        Get In Touch
-      </h2>
-      <p className="mb-10 text-slate-400">
+    <footer id="contact-me" className="pb-20 md:relative">
+      <MainHeadings
+        title="Get In Touch"
+        otherClasses="grow basis-1/2 before:grow before:basis-1/5 after:grow after:basis-1/5"
+      />
+      <p className={classNames('mb-10 text-slate-400', RubikRegular.className)}>
         Although I’m not currently looking for any new opportunities, my inbox
         is always open. Whether you have a question or just want to say hi, I’ll
         try my best to get back to you!
       </p>
       <a
         href="mailto:abhishek.ramasubramanian@gmail.com"
-        className=" b-1 mx-auto mt-3 block w-fit rounded-md border border-emerald-300 px-6 py-3 font-mono text-emerald-300 transition ease-linear hover:bg-emerald-100 hover:bg-opacity-10 focus-visible:bg-emerald-100 focus-visible:bg-opacity-10 focus-visible:outline-none"
+        className={classNames(
+          'b-1 mx-auto mt-3 block w-fit rounded-md border border-emerald-300 px-6 py-3 text-emerald-300 transition ease-linear hover:bg-emerald-100 hover:bg-opacity-10 focus-visible:bg-emerald-100 focus-visible:bg-opacity-10 focus-visible:outline-none',
+          jetBrainsMonoRegular.className
+        )}
       >
         Say Hi 👋
       </a>
-      <ul className={classes.contactsUl}>
-        <li>
-          {/* <Tooltip
-              TransitionComponent={Zoom}
-              title="Mail to Abhishek Ramasubramanian"
-              arrow
-            >
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=abhishek.ram0901@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Mail to Abhishek Ramasubramanian"
-                style={{ color: '#E94034' }}
-              >
-                <EmailIcon style={{ fontSize: 30 }} />
-              </a>
-            </Tooltip> */}
+      <ul className="mt-8 flex w-full items-center justify-center gap-6 md:fixed md:bottom-0 md:left-6 md:mt-0 md:w-12 md:flex-col md:after:h-10 md:after:w-px md:after:bg-slate-400">
+        <li className="">
+          <a
+            href="https://www.linkedin.com/in/abhishek-ramasubramanian/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Reach Abhishek Ramasubramanian on LinkedIn"
+          >
+            <LinkedInLogo fill="text-2xl fill-slate-300 hover:fill-emerald-300" />
+          </a>
         </li>
         <li>
-          {/* <Tooltip
-              TransitionComponent={Zoom}
-              title="Reach Abhishek Ramasubramanian on LinkedIn"
-              arrow
-            >
-              <a
-                href="https://www.linkedin.com/in/abhishek-ramasubramanian/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Reach Abhishek Ramasubramanian on LinkedIn"
-                style={{ color: '#0A66C2' }}
-              >
-                <LinkedInIcon style={{ fontSize: 30 }} />
-              </a>
-            </Tooltip> */}
+          <a
+            href="https://github.com/Abhishek-R09"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Reach Abhishek Ramasubramanian on GitHub"
+          >
+            <GitHubLogo fill="text-2xl fill-slate-300 hover:fill-emerald-300" />
+          </a>
         </li>
         <li>
-          {/* <Tooltip
-              TransitionComponent={Zoom}
-              title="Reach Abhishek Ramasubramanian on GitHub"
-              arrow
-            >
-              <a
-                href="https://github.com/Abhishek-R09"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Reach Abhishek Ramasubramanian on GitHub"
-                className={localClasses.githubColor}
-              >
-                <GitHubIcon style={{ fontSize: 30 }} />
-              </a>
-            </Tooltip> */}
-        </li>
-        <li>
-          {/* <Tooltip
-              TransitionComponent={Zoom}
-              title="Reach Abhishek Ramasubramanian on Twitter"
-              arrow
-            >
-              <a
-                href="https://twitter.com/abhishekR_09"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Reach Abhishek Ramasubramanian on Twitter"
-                style={{ color: '#1DA1F2' }}
-              >
-                <TwitterIcon style={{ fontSize: 30 }} />
-              </a>
-            </Tooltip> */}
+          <a
+            href="https://twitter.com/abhishekR_09"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Reach Abhishek Ramasubramanian on Twitter"
+            style={{ color: '#1DA1F2' }}
+          >
+            <TwitterLogo fill="text-2xl fill-slate-300 hover:fill-emerald-300" />
+          </a>
         </li>
       </ul>
-      {/* <small>Feel free to contact me 🙂</small>{' '} */}
-      {/* <small>
-        Credits to{' '}
+      {/* <div className="hidden md:fixed md:right-6 md:bottom-0 md:flex md:w-12 md:flex-col md:items-center md:after:h-10 md:after:w-px md:after:bg-slate-400">
         <a
-          className={localClasses.credits}
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://unsplash.com/@martenbjork"
+          href="mailto:abhishek.ramasubramanian@gmail.com"
+          className="text-slate-300 md:relative md:left-px md:-translate-y-36 md:rotate-90 md:hover:text-emerald-300"
         >
-          Marten Bjork
-        </a>{' '}
-        for the intro image
-      </small> */}
+          abhishek.ramasubramanian@gmail.com
+        </a>
+      </div> */}
     </footer>
   );
 };

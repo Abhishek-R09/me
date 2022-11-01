@@ -1,9 +1,16 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { faReact, faNode } from '@fortawesome/free-brands-svg-icons';
 import img from '../../../public/static/images/IMG20220813163307.jpg';
+import { classNames } from '../../../helpers/classNames';
+import {
+  jetBrainsMonoRegular,
+  RubikBold,
+  RubikRegular,
+} from '../../../helpers/fonts';
+import MainHeadings from '../../Heading';
 
 const skills = [
   {
@@ -48,41 +55,46 @@ const About = () => {
   const contentPara4 = `Here are a few technologies I’ve been working with recently:`;
 
   return (
-    <section id="about" className="mb-20 min-h-screen">
-      <h2 className="relative mb-10 flex w-full items-center text-xl font-bold text-slate-300 before:relative before:mr-3 before:h-px before:w-full before:bg-emerald-300 after:relative after:ml-3 after:h-px after:w-full after:bg-emerald-300">
-        About
-      </h2>
-      <div className="text-slate-400">
-        <p className="mb-3">{contentPara1}</p>
-        <p className="mb-3">{contentPara2}</p>
-        <p className="mb-3">{contentPara3}</p>
-        <p className="mb-3">{contentPara4}</p>
-      </div>
-      <div>
-        <ul className="grid grid-cols-2 gap-2">
-          {skills.map((skill) => (
-            <li
-              className="relative mb-2 pl-4 font-mono text-sm text-slate-400 before:absolute before:left-0 before:text-emerald-300 before:content-['▹']"
-              key={skill.name}
-            >
-              {skill.name}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="mx-auto mt-8 box-border h-full w-4/5">
-        <Image
-          src={img}
-          alt="My image"
-          title="Abhishek Ramasubramanian"
-          width={100}
-          height={100}
-          layout="responsive"
-          objectFit="cover"
-          objectPosition="top"
-          placeholder="blur"
-          className="rounded-md"
-        />
+    <section id="about" className="mb-20">
+      <MainHeadings title="About" />
+      <div className="flex flex-col md:flex-row">
+        <div className="md:basis-1/2">
+          <div className={classNames('text-slate-400', RubikRegular.className)}>
+            <p className="mb-3">{contentPara1}</p>
+            <p className="mb-3">{contentPara2}</p>
+            <p className="mb-3">{contentPara3}</p>
+            <p className="mb-3">{contentPara4}</p>
+          </div>
+          <div>
+            <ul className="grid grid-cols-2 gap-2">
+              {skills.map((skill) => (
+                <li
+                  className={classNames(
+                    "relative mb-2 pl-4 text-sm text-slate-400 before:absolute before:left-0 before:text-emerald-300 before:content-['▹']",
+                    jetBrainsMonoRegular.className
+                  )}
+                  key={skill.name}
+                >
+                  {skill.name}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="mx-auto mt-8 box-border h-full w-4/5 md:basis-1/3">
+          <Image
+            src={img}
+            alt="My image"
+            title="Abhishek Ramasubramanian"
+            width={100}
+            height={100}
+            layout="responsive"
+            objectFit="cover"
+            objectPosition="top"
+            placeholder="blur"
+            className="rounded-md"
+          />
+        </div>
       </div>
     </section>
   );

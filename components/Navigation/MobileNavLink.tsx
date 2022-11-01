@@ -2,6 +2,7 @@ import { Disclosure } from '@headlessui/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { classNames } from '../../helpers/classNames';
+import { RubikRegular } from '../../helpers/fonts';
 
 type MobileNavigationLinkProps = {
   href: string;
@@ -23,7 +24,8 @@ const MobileNavigationLink = ({
           router.pathname == `${href}`
             ? 'bg-gray-900 text-white'
             : 'text-gray-300 hover:bg-gray-600 hover:text-white',
-          'block rounded-md px-3 py-2 text-base font-medium'
+          'block rounded-md px-3 py-2 text-base font-medium',
+          RubikRegular.className
         )}
         aria-current={router.pathname == `${href}` ? 'page' : undefined}
         onClick={() => close()}
