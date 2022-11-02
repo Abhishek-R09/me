@@ -8,7 +8,10 @@ import TwitterLogo from '../../UI/TwitterLogo';
 
 const ContactMe = () => {
   return (
-    <footer id="contact-me" className="pb-20 md:relative">
+    <footer
+      id="contact-me"
+      className="m-auto mt-20 max-w-4xl pb-20 md:relative"
+    >
       <MainHeadings
         title="Get In Touch"
         otherClasses="grow basis-1/2 before:grow before:basis-1/5 after:grow after:basis-1/5"
@@ -27,7 +30,7 @@ const ContactMe = () => {
       >
         Say Hi 👋
       </a>
-      <ul className="mt-8 flex w-full items-center justify-center gap-6 md:fixed md:bottom-0 md:left-6 md:mt-0 md:w-12 md:flex-col md:after:h-10 md:after:w-px md:after:bg-slate-400">
+      <ul className="mt-8 flex w-full items-center justify-center gap-6 md:fixed md:bottom-0 md:left-6 md:mt-0 md:w-12 md:flex-col md:after:h-10 md:after:w-px md:after:bg-slate-400 lg:left-8 lg:w-16">
         <li className="">
           <a
             href="https://www.linkedin.com/in/abhishek-ramasubramanian/"

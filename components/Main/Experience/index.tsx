@@ -9,6 +9,7 @@ import {
   RubikBold,
   RubikRegular,
 } from '../../../helpers/fonts';
+import Section from '../../Section';
 
 const experiences = [
   {
@@ -38,90 +39,90 @@ const Experience = () => {
   const [currTab, setCurrTab] = useState(0);
 
   return (
-    <>
-      <section id="experience" className="mb-20">
-        <MainHeadings title="Experience" />
-        <div className="flex flex-col sm:flex-row">
-          <div className="w-full overflow-x-auto sm:grow sm:basis-1/3">
-            <ul
-              className={classNames(
-                'relative flex w-full sm:w-fit sm:flex-col',
-                jetBrainsMonoRegular.className
-              )}
-            >
-              {experiences.map((experience, index) => (
-                <li
-                  key={`${experience.organization}${index}`}
-                  className={classNames(
-                    'min-w-max rounded-t-md border-b-2 sm:rounded-t-none  sm:rounded-r-md sm:border-l-2 sm:border-b-0',
-                    index == currTab
-                      ? 'border-emerald-300 bg-slate-700 bg-opacity-40 text-emerald-300'
-                      : 'border-slate-400 text-slate-400',
-                    'py-3 px-4 hover:cursor-pointer hover:bg-slate-700 hover:bg-opacity-40 hover:text-emerald-300'
-                  )}
-                  onClick={() => setCurrTab(index)}
-                >
-                  {experience.organization}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="w-full p-4 sm:grow sm:basis-1/2">
+    <Section id="experience">
+      {/* <section id="experience" className="mb-20"> */}
+      <MainHeadings title="Experience" />
+      <div className="flex flex-col sm:flex-row">
+        <div className="w-full overflow-x-auto sm:grow sm:basis-1/3">
+          <ul
+            className={classNames(
+              'relative flex w-full sm:w-fit sm:flex-col',
+              jetBrainsMonoRegular.className
+            )}
+          >
             {experiences.map((experience, index) => (
-              <div
+              <li
                 key={`${experience.organization}${index}`}
-                hidden={index !== currTab}
+                className={classNames(
+                  'min-w-max rounded-t-md border-b-2 sm:rounded-t-none  sm:rounded-r-md sm:border-l-2 sm:border-b-0',
+                  index == currTab
+                    ? 'border-emerald-300 bg-slate-700 bg-opacity-40 text-emerald-300'
+                    : 'border-slate-400 text-slate-400',
+                  'py-3 px-4 hover:cursor-pointer hover:bg-slate-700 hover:bg-opacity-40 hover:text-emerald-300'
+                )}
+                onClick={() => setCurrTab(index)}
               >
-                <h3
+                {experience.organization}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="w-full p-4 sm:grow sm:basis-1/2 md:basis-3/5 lg:basis-2/3">
+          {experiences.map((experience, index) => (
+            <div
+              key={`${experience.organization}${index}`}
+              hidden={index !== currTab}
+            >
+              <h3
+                className={classNames(
+                  'mb-1 text-lg text-slate-300',
+                  RubikBold.className
+                )}
+              >
+                {experience.position}
+              </h3>
+              <h4
+                className={classNames(
+                  'mb-2 text-lg text-emerald-300',
+                  RubikBold.className
+                )}
+              >
+                {experience.organization}
+              </h4>
+              <p
+                className={classNames(
+                  'mb-2 text-sm text-slate-400',
+                  jetBrainsMonoRegular.className
+                )}
+              >
+                {experience.from} - {experience.to}
+              </p>
+              <div>
+                <ul
                   className={classNames(
-                    'mb-1 text-lg text-slate-300',
-                    RubikBold.className
+                    'text-slate-400',
+                    RubikRegular.className
                   )}
                 >
-                  {experience.position}
-                </h3>
-                <h4
-                  className={classNames(
-                    'mb-2 text-lg text-emerald-300',
-                    RubikBold.className
-                  )}
-                >
-                  {experience.organization}
-                </h4>
-                <p
-                  className={classNames(
-                    'mb-2 text-sm text-slate-400',
-                    jetBrainsMonoRegular.className
-                  )}
-                >
-                  {experience.from} - {experience.to}
-                </p>
-                <div>
-                  <ul
-                    className={classNames(
-                      'text-slate-400',
-                      RubikRegular.className
-                    )}
-                  >
-                    {experience.description.map((desc) => (
-                      <li
-                        key={desc}
-                        className="relative mb-2 pl-7 text-slate-400 before:absolute before:left-0 before:text-emerald-300 before:content-['▹']"
-                      >
-                        {desc}
-                      </li>
-                    ))}
-                    {/* <li>ABC</li>
+                  {experience.description.map((desc) => (
+                    <li
+                      key={desc}
+                      className="relative mb-2 pl-7 text-slate-400 before:absolute before:left-0 before:text-emerald-300 before:content-['▹']"
+                    >
+                      {desc}
+                    </li>
+                  ))}
+                  {/* <li>ABC</li>
                     <li>DEF</li>
                     <li>GHI</li> */}
-                  </ul>
-                </div>
+                </ul>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
-    </>
+      </div>
+      {/* </section> */}
+    </Section>
   );
 };
 

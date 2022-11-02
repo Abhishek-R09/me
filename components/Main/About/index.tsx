@@ -11,6 +11,7 @@ import {
   RubikRegular,
 } from '../../../helpers/fonts';
 import MainHeadings from '../../Heading';
+import Section from '../../Section';
 
 const skills = [
   {
@@ -55,7 +56,8 @@ const About = () => {
   const contentPara4 = `Here are a few technologies I’ve been working with recently:`;
 
   return (
-    <section id="about" className="mb-20">
+    // <section id="about" className="m-auto mb-20 max-w-4xl">
+    <Section id="about">
       <MainHeadings title="About" />
       <div className="flex flex-col md:flex-row">
         <div className="md:basis-1/2">
@@ -96,7 +98,8 @@ const About = () => {
           />
         </div>
       </div>
-    </section>
+    </Section>
+    // </section>
   );
 };
 

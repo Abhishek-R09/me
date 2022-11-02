@@ -289,77 +289,160 @@ import DesktopNavigationLink from './DesktopNavigationLink';
 import MobileNavigationLink from './MobileNavLink';
 import whiteLogo from '../../public/static/svg/logo-color.svg';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { useScrollPosition } from '../../hooks/useScrollPosition';
+import { classNames } from '../../helpers/classNames';
 
 const navigation = [
-  { name: 'About', href: '/#about' },
-  { name: 'Experience', href: '/#experience' },
-  { name: 'Projects', href: '/#projects' },
-  { name: 'Contact', href: '/#contact-me' },
+  { name: 'About', href: 'about' },
+  { name: 'Experience', href: 'experience' },
+  { name: 'Projects', href: 'projects' },
+  { name: 'Contact', href: 'contact-me' },
 ];
 
 const NavigationBar = () => {
+  const [hState, sethState] = useState('top');
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    var lastVal = 0;
+    window.onscroll = function () {
+      let y = window.scrollY;
+      if (y > lastVal) {
+        sethState('up');
+      }
+      if (y < lastVal) {
+        sethState('down');
+      }
+      if (y === 0) {
+        sethState('top-0');
+      }
+      lastVal = y;
+    };
+  }, []);
+
+  // const [scrolled, setScrolled] = useState(false);
+
+  // const handleScroll = () => {
+  //   const offset = window.scrollY;
+
+  //   if (offset > 200) {
+  //     setScrolled(true);
+  //   } else {
+  //     setScrolled(false);
+  //   }
+  // };
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+  // });
+
+  // console.log(window.scrollY);
+
+  const scrollToSection = (section: string) => {
+    document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <Disclosure as="nav" className="absolute z-10 w-full">
-      {({ open }) => (
-        <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center">
-              <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
+    <nav>
+      {/* <div
+        className={classNames(
+          'fixed z-30 mx-auto w-full bg-slate-900 bg-opacity-80 px-3 pt-2 shadow-md shadow-black backdrop-blur transition-all xsm:px-6 md:px-20 lg:px-32',
+          hState
+        )}
+      >
+        <div className="relative flex h-16 items-center">
+          <div className="absolute inset-y-0 right-0 z-50 flex items-center md:hidden">
+            <button
+              className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              onClick={() => setOpen((prev) => !prev)}
+            >
+              <span className="sr-only">Open main menu</span>
+              {open ? (
+                <XMarkIcon className="block h-8 w-8" aria-hidden="true" />
+              ) : (
+                <Bars3Icon className="block h-8 w-8" aria-hidden="true" />
+              )}
+            </button>
+          </div>
+          <div className="flex items-center justify-center md:flex-1 md:items-stretch md:justify-between">
+            <div className="flex flex-shrink-0 items-center text-yellow-500 ">
+              <div className="h-12 w-12">
+                <Image src={whiteLogo} alt="Logo" />
               </div>
-              <div className="flex items-center justify-center md:flex-1 md:items-stretch md:justify-between">
-                <div className="flex flex-shrink-0 items-center text-yellow-500 ">
-                  <div className="h-8 w-8">
-                    <Image src={whiteLogo} alt="Logo" />
-                  </div>
-                </div>
-                <div className="hidden md:ml-6 md:block">
-                  <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <DesktopNavigationLink
-                        key={item.name}
-                        href={item.href}
-                        name={item.name}
-                      />
-                    ))}
-                  </div>
-                </div>
+            </div>
+            <div className="hidden md:ml-6 md:block">
+              <div className="flex h-full items-center space-x-4">
+                {navigation.map((item) => (
+                  <DesktopNavigationLink
+                    key={item.name}
+                    href={item.href}
+                    name={item.name}
+                    scrollFunc={scrollToSection}
+                  />
+                ))}
               </div>
             </div>
           </div>
-          <Transition
-            enter="transition duration-100 ease-out"
-            enterFrom="transform scale-95 opacity-0"
-            enterTo="transform scale-100 opacity-100"
-            leave="transition duration-75 ease-out"
-            leaveFrom="transform scale-100 opacity-100"
-            leaveTo="transform scale-95 opacity-0"
-          >
-            <Disclosure.Panel className="md:hidden">
-              {({ close }) => (
-                <div className="space-y-1 rounded-md bg-slate-700 px-2 pt-2 pb-3">
-                  {navigation.map((item) => (
-                    <MobileNavigationLink
-                      key={item.name}
-                      href={item.href}
-                      name={item.name}
-                      close={close}
-                    />
-                  ))}
-                </div>
-              )}
-            </Disclosure.Panel>
-          </Transition>
-        </>
-      )}
-    </Disclosure>
+        </div>
+      </div> */}
+      <div
+        className={classNames(
+          'fixed z-30 flex h-16 w-full items-center bg-slate-900 bg-opacity-80 px-3 py-2 shadow-md shadow-black backdrop-blur transition-all xsm:px-6 md:px-20 lg:px-32',
+          hState == 'up' ? '-top-20' : 'top-0'
+        )}
+      >
+        <div className="flex items-center justify-center md:flex-1 md:items-stretch md:justify-between">
+          <div className="h-12 w-12">
+            <Image src={whiteLogo} alt="Logo" />
+          </div>
+          <div className="hidden md:ml-6 md:block">
+            <div className="flex h-full items-center space-x-4">
+              {navigation.map((item) => (
+                <DesktopNavigationLink
+                  key={item.name}
+                  href={item.href}
+                  name={item.name}
+                  scrollFunc={scrollToSection}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        className={classNames(
+          'fixed right-3 z-50 rounded-md p-2 text-gray-400 transition-all hover:bg-slate-700 hover:text-emerald-300 focus:border focus:border-dashed focus:border-emerald-300 focus:text-emerald-300 focus:outline-none xsm:right-6  md:hidden',
+          hState == 'up' && !open ? '-top-20' : 'top-2'
+        )}
+        onClick={() => setOpen((prev) => !prev)}
+      >
+        <span className="sr-only">Open main menu</span>
+        {open ? (
+          <XMarkIcon className="block h-8 w-8" aria-hidden="true" />
+        ) : (
+          <Bars3Icon className="block h-8 w-8" aria-hidden="true" />
+        )}
+      </button>
+      <div
+        className={classNames(
+          'fixed z-40 flex h-screen w-full transition-all md:hidden',
+          open ? 'right-0' : '-right-full'
+        )}
+      >
+        <div className="h-screen w-2/5 bg-slate-900 bg-opacity-30 backdrop-blur"></div>
+        <div className="ml-auto h-full w-3/5 rounded-l-lg bg-slate-900 px-2 pt-20 pb-3 shadow-xl shadow-black">
+          {navigation.map((item) => (
+            <MobileNavigationLink
+              key={item.name}
+              href={item.href}
+              name={item.name}
+              scrollFunc={scrollToSection}
+              close={() => setOpen(false)}
+            />
+          ))}
+        </div>
+      </div>
+    </nav>
   );
 };
 

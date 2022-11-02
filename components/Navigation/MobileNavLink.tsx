@@ -8,31 +8,33 @@ type MobileNavigationLinkProps = {
   href: string;
   name: string;
   close: Function;
+  scrollFunc: Function;
 };
 
 const MobileNavigationLink = ({
   href,
   name,
   close,
+  scrollFunc,
 }: MobileNavigationLinkProps) => {
   const router = useRouter();
   return (
-    <Link href={href} passHref>
-      <Disclosure.Button
-        as="span"
-        className={classNames(
-          router.pathname == `${href}`
-            ? 'bg-gray-900 text-white'
-            : 'text-gray-300 hover:bg-gray-600 hover:text-white',
-          'block rounded-md px-3 py-2 text-base font-medium',
-          RubikRegular.className
-        )}
-        aria-current={router.pathname == `${href}` ? 'page' : undefined}
-        onClick={() => close()}
-      >
-        {name}
-      </Disclosure.Button>
-    </Link>
+    <span
+      // as="span"
+      className={classNames(
+        'text-slate-400 hover:bg-gray-600 hover:text-emerald-300',
+        'block rounded-md px-3 py-2 text-base font-medium',
+        RubikRegular.className
+      )}
+      onClick={(e) => {
+        // console.log(href);
+        scrollFunc(href);
+        close();
+        return e;
+      }}
+    >
+      {name}
+    </span>
   );
 };
 

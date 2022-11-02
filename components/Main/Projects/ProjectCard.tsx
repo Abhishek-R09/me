@@ -87,7 +87,7 @@ const ProjectCard = ({
     //     </div>
     //   </div>
     // </li>
-    <li className="relative mb-5 grid grid-cols-12 grid-rows-6 items-center gap-2 last:mb-0">
+    <li className="relative mb-5 grid grid-cols-12 grid-rows-6 items-center gap-2 last:mb-0 lg:mb-10">
       <div
         className={classNames(
           'relative z-20 col-span-full row-span-full p-5',
@@ -152,7 +152,7 @@ const ProjectCard = ({
       </div>
       <div
         className={classNames(
-          'z-10 col-span-full row-span-full h-full rounded-md bg-emerald-300 opacity-5 md:row-start-3 md:row-end-5 md:opacity-40 md:hover:bg-transparent md:hover:opacity-100',
+          'z-10 col-span-full row-span-full h-full rounded-md bg-emerald-300 opacity-5 md:row-start-2 md:row-end-6 md:opacity-40 md:hover:bg-transparent md:hover:opacity-100 lg:row-span-full',
           index % 2 == 0
             ? 'md:col-end-9 md:even:col-start-1'
             : 'md:col-span-full md:col-start-5'

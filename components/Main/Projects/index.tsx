@@ -1,5 +1,6 @@
 import React from 'react';
 import MainHeadings from '../../Heading';
+import Section from '../../Section';
 import ProjectCard from './ProjectCard';
 
 const projects = [
@@ -42,7 +43,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="mb-20">
+    <Section id="projects">
       <MainHeadings title="Projects" />
       <ul className="list-none">
         {projects.map((project, index) => (
@@ -59,7 +60,7 @@ const Projects = () => {
           />
         ))}
       </ul>
-    </section>
+    </Section>
   );
 };
 
