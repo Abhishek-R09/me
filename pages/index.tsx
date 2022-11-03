@@ -1,7 +1,6 @@
-import Head from 'next/head';
-import Main from '../components/Main/Main';
-import { customTitle } from '../helpers/customDocProps';
-import NavigationBar from '../components/Navigation';
+import Head from 'next/head'
+import Main from '../components/Main/Main'
+import NavigationBar from '../components/Navigation'
 
 const Home = () => (
   <>
@@ -14,6 +13,6 @@ const Home = () => (
       <Main />
     </div>
   </>
-);
+)
 
-export default Home;
+export default Home

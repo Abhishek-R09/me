@@ -1,9 +1,9 @@
-import { classNames } from '../../../helpers/classNames';
+import { classNames } from '../../../helpers/classNames'
 import {
   jetBrainsMonoRegular,
   RubikBold,
   RubikRegular,
-} from '../../../helpers/fonts';
+} from '../../../helpers/fonts'
 
 const Intro = () => {
   return (
@@ -57,7 +57,7 @@ const Intro = () => {
         </a>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Intro;
+export default Intro

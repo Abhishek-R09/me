@@ -1,7 +1,7 @@
-import React from 'react';
-import MainHeadings from '../../Heading';
-import Section from '../../Section';
-import ProjectCard from './ProjectCard';
+import React from 'react'
+import MainHeadings from '../../Heading'
+import Section from '../../Section'
+import ProjectCard from './ProjectCard'
 
 const projects = [
   {
@@ -39,7 +39,7 @@ const projects = [
     projLink: 'https://github.com/Abhishek-R09/Pharmacy-Management-System',
     techUsed: ['ABC', 'DEF', 'GHI'],
   },
-];
+]
 
 const Projects = () => {
   return (
@@ -61,7 +61,7 @@ const Projects = () => {
         ))}
       </ul>
     </Section>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

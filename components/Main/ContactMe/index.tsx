@@ -1,25 +1,21 @@
-import React from 'react';
-import { classNames } from '../../../helpers/classNames';
-import { jetBrainsMonoRegular, RubikRegular } from '../../../helpers/fonts';
-import MainHeadings from '../../Heading';
-import GitHubLogo from '../../UI/GitHubLogo';
-import LinkedInLogo from '../../UI/LinkedInLogo';
-import TwitterLogo from '../../UI/TwitterLogo';
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react'
+import { classNames } from '../../../helpers/classNames'
+import { jetBrainsMonoRegular, RubikRegular } from '../../../helpers/fonts'
+import MainHeadings from '../../Heading'
 
 const ContactMe = () => {
   return (
-    <footer
-      id="contact-me"
-      className="m-auto mt-20 max-w-4xl pb-20 md:relative"
-    >
+    <footer id="contact-me" className="m-auto mt-20 max-w-4xl pb-20 md:relative">
       <MainHeadings
         title="Get In Touch"
         otherClasses="grow basis-1/2 before:grow before:basis-1/5 after:grow after:basis-1/5"
       />
       <p className={classNames('mb-10 text-slate-400', RubikRegular.className)}>
-        Although I’m not currently looking for any new opportunities, my inbox
-        is always open. Whether you have a question or just want to say hi, I’ll
-        try my best to get back to you!
+        Although I’m not currently looking for any new opportunities, my inbox is
+        always open. Whether you have a question or just want to say hi, I’ll try my
+        best to get back to you!
       </p>
       <a
         href="mailto:abhishek.ramasubramanian@gmail.com"
@@ -31,14 +27,15 @@ const ContactMe = () => {
         Say Hi 👋
       </a>
       <ul className="mt-8 flex w-full items-center justify-center gap-6 md:fixed md:bottom-0 md:left-6 md:mt-0 md:w-12 md:flex-col md:after:h-10 md:after:w-px md:after:bg-slate-400 lg:left-8 lg:w-16">
-        <li className="">
+        <li>
           <a
             href="https://www.linkedin.com/in/abhishek-ramasubramanian/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Reach Abhishek Ramasubramanian on LinkedIn"
+            className="flex rounded-md p-2 text-slate-300 hover:text-emerald-300 focus:outline-dashed focus:outline-1 focus:outline-emerald-300"
           >
-            <LinkedInLogo fill="text-2xl fill-slate-300 hover:fill-emerald-300" />
+            <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
           </a>
         </li>
         <li>
@@ -47,8 +44,9 @@ const ContactMe = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Reach Abhishek Ramasubramanian on GitHub"
+            className="flex rounded-md p-2 text-slate-300 hover:text-emerald-300 focus:outline-dashed focus:outline-1 focus:outline-emerald-300"
           >
-            <GitHubLogo fill="text-2xl fill-slate-300 hover:fill-emerald-300" />
+            <FontAwesomeIcon icon={faGithub} className="text-2xl" />
           </a>
         </li>
         <li>
@@ -57,22 +55,14 @@ const ContactMe = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Reach Abhishek Ramasubramanian on Twitter"
-            style={{ color: '#1DA1F2' }}
+            className="flex rounded-md p-2 text-slate-300 hover:text-emerald-300 focus:outline-dashed focus:outline-1 focus:outline-emerald-300"
           >
-            <TwitterLogo fill="text-2xl fill-slate-300 hover:fill-emerald-300" />
+            <FontAwesomeIcon icon={faTwitter} className="text-2xl" />
           </a>
         </li>
       </ul>
-      {/* <div className="hidden md:fixed md:right-6 md:bottom-0 md:flex md:w-12 md:flex-col md:items-center md:after:h-10 md:after:w-px md:after:bg-slate-400">
-        <a
-          href="mailto:abhishek.ramasubramanian@gmail.com"
-          className="text-slate-300 md:relative md:left-px md:-translate-y-36 md:rotate-90 md:hover:text-emerald-300"
-        >
-          abhishek.ramasubramanian@gmail.com
-        </a>
-      </div> */}
     </footer>
-  );
-};
+  )
+}
 
-export default ContactMe;
+export default ContactMe

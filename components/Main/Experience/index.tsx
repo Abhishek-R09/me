@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-import { faReact, faNode } from '@fortawesome/free-brands-svg-icons';
-import MainHeadings from '../../Heading';
-import { classNames } from '../../../helpers/classNames';
+import React, { useState } from 'react'
+import MainHeadings from '../../Heading'
+import { classNames } from '../../../helpers/classNames'
 import {
   jetBrainsMonoRegular,
   RubikBold,
   RubikRegular,
-} from '../../../helpers/fonts';
-import Section from '../../Section';
+} from '../../../helpers/fonts'
+import Section from '../../Section'
 
 const experiences = [
   {
@@ -33,41 +30,41 @@ const experiences = [
     to: 'February 2021',
     description: [`ABC`, `DEF`, `GHI`],
   },
-];
+]
 
 const Experience = () => {
-  const [currTab, setCurrTab] = useState(0);
+  const [currTab, setCurrTab] = useState(0)
 
   return (
     <Section id="experience">
-      {/* <section id="experience" className="mb-20"> */}
       <MainHeadings title="Experience" />
       <div className="flex flex-col sm:flex-row">
         <div className="w-full overflow-x-auto sm:grow sm:basis-1/3">
           <ul
             className={classNames(
-              'relative flex w-full sm:w-fit sm:flex-col',
+              'relative flex w-full p-2 sm:w-fit sm:flex-col',
               jetBrainsMonoRegular.className
             )}
           >
             {experiences.map((experience, index) => (
-              <li
-                key={`${experience.organization}${index}`}
-                className={classNames(
-                  'min-w-max rounded-t-md border-b-2 sm:rounded-t-none  sm:rounded-r-md sm:border-l-2 sm:border-b-0',
-                  index == currTab
-                    ? 'border-emerald-300 bg-slate-700 bg-opacity-40 text-emerald-300'
-                    : 'border-slate-400 text-slate-400',
-                  'py-3 px-4 hover:cursor-pointer hover:bg-slate-700 hover:bg-opacity-40 hover:text-emerald-300'
-                )}
-                onClick={() => setCurrTab(index)}
-              >
-                {experience.organization}
+              <li key={`${experience.organization}${index}`}>
+                <button
+                  className={classNames(
+                    'min-w-max rounded-t-md border-b-2 focus:outline-dashed focus:outline-1 focus:outline-emerald-300 sm:rounded-t-none sm:rounded-r-md sm:border-l-2 sm:border-b-0',
+                    index == currTab
+                      ? 'border-emerald-300 bg-slate-700 bg-opacity-40 text-emerald-300'
+                      : 'border-slate-400 text-slate-400',
+                    'py-3 px-4 hover:cursor-pointer hover:bg-slate-700 hover:bg-opacity-40 hover:text-emerald-300'
+                  )}
+                  onClick={() => setCurrTab(index)}
+                >
+                  {experience.organization}
+                </button>
               </li>
             ))}
           </ul>
         </div>
-        <div className="w-full p-4 sm:grow sm:basis-1/2 md:basis-3/5 lg:basis-2/3">
+        <div className="w-full p-4 sm:grow sm:basis-1/2 md:basis-1/2 lg:basis-2/3">
           {experiences.map((experience, index) => (
             <div
               key={`${experience.organization}${index}`}
@@ -98,12 +95,7 @@ const Experience = () => {
                 {experience.from} - {experience.to}
               </p>
               <div>
-                <ul
-                  className={classNames(
-                    'text-slate-400',
-                    RubikRegular.className
-                  )}
-                >
+                <ul className={classNames('text-slate-400', RubikRegular.className)}>
                   {experience.description.map((desc) => (
                     <li
                       key={desc}
@@ -112,18 +104,14 @@ const Experience = () => {
                       {desc}
                     </li>
                   ))}
-                  {/* <li>ABC</li>
-                    <li>DEF</li>
-                    <li>GHI</li> */}
                 </ul>
               </div>
             </div>
           ))}
         </div>
       </div>
-      {/* </section> */}
     </Section>
-  );
-};
+  )
+}
 
-export default Experience;
+export default Experience

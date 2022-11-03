@@ -1,17 +1,13 @@
-import React from 'react';
-import Image from 'next/legacy/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-import { faReact, faNode } from '@fortawesome/free-brands-svg-icons';
-import img from '../../../public/static/images/IMG20220813163307.jpg';
-import { classNames } from '../../../helpers/classNames';
-import {
-  jetBrainsMonoRegular,
-  RubikBold,
-  RubikRegular,
-} from '../../../helpers/fonts';
-import MainHeadings from '../../Heading';
-import Section from '../../Section';
+import React from 'react'
+import Image from 'next/legacy/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDatabase } from '@fortawesome/free-solid-svg-icons'
+import { faReact, faNode } from '@fortawesome/free-brands-svg-icons'
+import img from '../../../public/static/images/IMG20220813163307.jpg'
+import { classNames } from '../../../helpers/classNames'
+import { jetBrainsMonoRegular, RubikRegular } from '../../../helpers/fonts'
+import MainHeadings from '../../Heading'
+import Section from '../../Section'
 
 const skills = [
   {
@@ -44,19 +40,18 @@ const skills = [
     icon: <FontAwesomeIcon icon={faNode} />,
     color: '#77B062',
   },
-];
+]
 
 const About = () => {
-  const contentPara1 = `Hi! I'm Abhishek Ramasubramanian. I'm a Computer Science student from Vellore Institute of Technology, Vellore. The amount of progress made in the field of computer science fascinates me and motivates me to explore new things. I'm open to learning new stuff and going beyond them.`;
+  const contentPara1 = `Hi! I'm Abhishek Ramasubramanian. I'm a Computer Science student from Vellore Institute of Technology, Vellore. The amount of progress made in the field of computer science fascinates me and motivates me to explore new things. I'm open to learning new stuff and going beyond them.`
 
-  const contentPara2 = `I have some experience in using different Web Technologies and also work with Databases in SQL as well as NoSQL. The best of my projects are listed down below and they are open-source. I would welcome suggestions to improve them. I have even collaborated on some of them. Please do check it out.`;
+  const contentPara2 = `I have some experience in using different Web Technologies and also work with Databases in SQL as well as NoSQL. The best of my projects are listed down below and they are open-source. I would welcome suggestions to improve them. I have even collaborated on some of them. Please do check it out.`
 
-  const contentPara3 = `I'm an apt leader and a good communicator where needed. I focus on my goal and don't deviate from it unless necessary. I give priority to the completion of the assigned work and not leave it till the end. This is my guarantee. I'm fluent in English and Hindi while Tamil is my mother tongue. Generally I don't post much things on social media but I'm present there to be updated with the current affairs.`;
+  const contentPara3 = `I'm an apt leader and a good communicator where needed. I focus on my goal and don't deviate from it unless necessary. I give priority to the completion of the assigned work and not leave it till the end. This is my guarantee. I'm fluent in English and Hindi while Tamil is my mother tongue. Generally I don't post much things on social media but I'm present there to be updated with the current affairs.`
 
-  const contentPara4 = `Here are a few technologies I’ve been working with recently:`;
+  const contentPara4 = `Here are a few technologies I’ve been working with recently:`
 
   return (
-    // <section id="about" className="m-auto mb-20 max-w-4xl">
     <Section id="about">
       <MainHeadings title="About" />
       <div className="flex flex-col md:flex-row">
@@ -99,8 +94,7 @@ const About = () => {
         </div>
       </div>
     </Section>
-    // </section>
-  );
-};
+  )
+}
 
-export default About;
+export default About

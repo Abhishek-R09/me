@@ -1,41 +1,38 @@
-import { Disclosure } from '@headlessui/react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { classNames } from '../../helpers/classNames';
-import { RubikRegular } from '../../helpers/fonts';
+import { classNames } from '../../helpers/classNames'
+import { RubikRegular } from '../../helpers/fonts'
 
 type MobileNavigationLinkProps = {
-  href: string;
-  name: string;
-  close: Function;
-  scrollFunc: Function;
-};
+  href: string
+  name: string
+  close: Function
+  scrollFunc: Function
+  tabIndex: number
+}
 
 const MobileNavigationLink = ({
   href,
   name,
   close,
   scrollFunc,
+  tabIndex,
 }: MobileNavigationLinkProps) => {
-  const router = useRouter();
   return (
-    <span
-      // as="span"
+    <button
       className={classNames(
-        'text-slate-400 hover:bg-gray-600 hover:text-emerald-300',
-        'block rounded-md px-3 py-2 text-base font-medium',
+        'w-full text-slate-400 hover:bg-gray-600 hover:text-emerald-300',
+        'block rounded-md px-3 py-2 text-base font-medium focus-visible:text-emerald-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-emerald-300',
         RubikRegular.className
       )}
+      tabIndex={tabIndex}
       onClick={(e) => {
-        // console.log(href);
-        scrollFunc(href);
-        close();
-        return e;
+        scrollFunc(href)
+        close()
+        return e
       }}
     >
       {name}
-    </span>
-  );
-};
+    </button>
+  )
+}
 
-export default MobileNavigationLink;
+export default MobileNavigationLink

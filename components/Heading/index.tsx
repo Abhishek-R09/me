@@ -1,10 +1,10 @@
-import { classNames } from '../../helpers/classNames';
-import { RubikBold } from '../../helpers/fonts';
+import { classNames } from '../../helpers/classNames'
+import { RubikBold } from '../../helpers/fonts'
 
 type MainHeadingsType = {
-  title: string;
-  otherClasses?: string;
-};
+  title: string
+  otherClasses?: string
+}
 
 const MainHeadings = ({ title, otherClasses = '' }: MainHeadingsType) => {
   return (
@@ -17,7 +17,7 @@ const MainHeadings = ({ title, otherClasses = '' }: MainHeadingsType) => {
     >
       {title}
     </h2>
-  );
-};
+  )
+}
 
-export default MainHeadings;
+export default MainHeadings
