@@ -9,6 +9,15 @@ module.exports = {
         xsm: '480px',
         ...defaultTheme.screens,
       },
+      spacing: {
+        // ...defaultTheme.theme.inset,
+        176: '176px',
+        352: '352px',
+      },
+      inset: {
+        176: '176px',
+        352: '352px',
+      },
     },
   },
   plugins: [],

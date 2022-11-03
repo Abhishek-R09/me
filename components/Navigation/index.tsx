@@ -49,9 +49,12 @@ const NavigationBar = () => {
         )}
       >
         <div className="flex items-center justify-center md:flex-1 md:items-stretch md:justify-between">
-          <div className="h-12 w-12">
-            <Image src={whiteLogo} alt="Logo" />
-          </div>
+          <button
+            className="h-12 w-12 rounded-full p-1 hover:bg-slate-700 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-emerald-300"
+            onClick={() => scrollToSection('home')}
+          >
+            <Image src={whiteLogo} alt="Logo" className="rounded-full" />
+          </button>
           <div className="hidden md:ml-6 md:block">
             <div className="flex h-full items-center space-x-4">
               {navigation.map((item) => (

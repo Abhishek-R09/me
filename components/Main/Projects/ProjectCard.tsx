@@ -36,8 +36,8 @@ const ProjectCard = ({
         className={classNames(
           'relative z-20 col-span-full row-span-full p-5',
           index % 2 == 0
-            ? 'md:col-span-full md:col-start-5 md:items-end md:text-right'
-            : 'md:col-end-9 md:even:col-start-1'
+            ? 'md:col-span-full md:col-start-5 md:items-end md:text-right lg:col-start-6'
+            : 'md:col-end-9 md:even:col-start-1 lg:col-end-8'
         )}
       >
         <p
@@ -82,17 +82,17 @@ const ProjectCard = ({
         </ul>
         <a
           href="/"
-          className="-ml-2 inline-block rounded-md p-2 text-slate-300 hover:text-emerald-300 focus:outline-dashed focus:outline-1 focus:outline-emerald-300"
+          className="-ml-2 inline-block rounded-md p-2 text-slate-300 transition-all hover:text-emerald-300 focus:outline-dashed focus:outline-1 focus:outline-emerald-300"
         >
           <FontAwesomeIcon icon={faGithub} className="text-2xl" />
         </a>
       </div>
       <div
         className={classNames(
-          'z-10 col-span-full row-span-full h-full rounded-md bg-emerald-300 opacity-5 md:row-start-2 md:row-end-6 md:opacity-40 md:hover:bg-transparent md:hover:opacity-100 lg:row-span-full',
+          'xllg:row-span-full z-10 col-span-full row-span-full h-full rounded-md bg-emerald-300 opacity-5 transition-all md:row-start-2 md:row-end-6 md:opacity-40 md:hover:bg-transparent md:hover:opacity-100',
           index % 2 == 0
-            ? 'md:col-end-9 md:even:col-start-1'
-            : 'md:col-span-full md:col-start-5'
+            ? 'md:col-start-1 md:col-end-9 lg:col-end-8'
+            : 'md:col-span-full md:col-start-5 lg:col-start-6'
         )}
       >
         <div className="relative h-full w-full rounded-md mix-blend-multiply">
@@ -103,7 +103,7 @@ const ProjectCard = ({
             layout="fill"
             objectFit="cover"
             objectPosition="0 0"
-            className=" rounded-md"
+            className="rounded-md"
           />
         </div>
       </div>

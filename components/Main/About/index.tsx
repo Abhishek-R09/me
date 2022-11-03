@@ -78,19 +78,21 @@ const About = () => {
             </ul>
           </div>
         </div>
-        <div className="mx-auto mt-8 box-border h-full w-4/5 md:basis-1/3">
-          <Image
-            src={img}
-            alt="My image"
-            title="Abhishek Ramasubramanian"
-            width={100}
-            height={100}
-            layout="responsive"
-            objectFit="cover"
-            objectPosition="top"
-            placeholder="blur"
-            className="rounded-md"
-          />
+        <div className="mx-auto mt-8 box-border h-full w-4/5 rounded-md bg-emerald-300 transition-all hover:bg-white md:basis-1/3">
+          <div className="mix-blend-multiply">
+            <Image
+              src={img}
+              alt="My image"
+              title="Abhishek Ramasubramanian"
+              width={100}
+              height={100}
+              layout="responsive"
+              objectFit="cover"
+              objectPosition="top"
+              placeholder="blur"
+              className="rounded-md"
+            />
+          </div>
         </div>
       </div>
     </Section>
