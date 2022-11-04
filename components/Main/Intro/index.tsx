@@ -1,4 +1,5 @@
 import { classNames } from '../../../helpers/classNames'
+import { motion } from 'framer-motion'
 import {
   jetBrainsMonoRegular,
   RubikBold,
@@ -7,9 +8,12 @@ import {
 
 const Intro = () => {
   return (
-    <section
+    <motion.section
       id="home"
-      className="m-auto flex min-h-screen max-w-5xl flex-col items-start justify-center"
+      className="m-auto mb-3 flex min-h-screen max-w-5xl flex-col items-start justify-center"
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ type: 'spring', stiffness: 100 }}
     >
       <div className="md:text-center">
         <p
@@ -47,7 +51,8 @@ const Intro = () => {
           building accessible, human-centered products at Upstatement.
         </p>
         <a
-          href="/"
+          href="https://drive.google.com/file/d/122D_oWvFF9-pet9neCNXPW40OVTWWlRk/view?usp=share_link"
+          target="_blank"
           className={classNames(
             'b-1 mt-3 rounded-md border border-emerald-300 px-6 py-3 text-sm text-emerald-300 transition ease-linear hover:bg-emerald-100 hover:bg-opacity-10 focus-visible:bg-emerald-100 focus-visible:bg-opacity-10 focus-visible:outline-none xsm:text-base sm:text-lg xl:text-xl',
             jetBrainsMonoRegular.className
@@ -56,7 +61,7 @@ const Intro = () => {
           Resume
         </a>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

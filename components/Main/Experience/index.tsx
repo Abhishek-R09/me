@@ -7,6 +7,7 @@ import {
   RubikRegular,
 } from '../../../helpers/fonts'
 import Section from '../../Section'
+import { motion } from 'framer-motion'
 
 const experiences = [
   {
@@ -55,15 +56,21 @@ const Experience = () => {
           </div>
           <ul
             className={classNames(
-              'relative z-0 flex w-full min-w-max text-xs sm:w-fit sm:flex-col md:text-base',
+              'relative z-0 flex w-full min-w-max text-xs sm:w-fit sm:flex-col sm:text-base',
               jetBrainsMonoRegular.className
             )}
           >
             {experiences.map((experience, index) => (
-              <li key={`${experience.organization}${index}`}>
+              <motion.li
+                key={`${experience.organization}${index}`}
+                initial={{ opacity: 0, x: -100 }}
+                transition={{ type: 'tween', ease: 'easeInOut' }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
                 <button
                   className={classNames(
-                    'mb-px h-12 w-44 min-w-max rounded-t-md border-slate-400 text-center focus-visible:border-2 focus-visible:border-dashed focus-visible:border-emerald-300 focus-visible:outline-none sm:rounded-t-none sm:rounded-r-md sm:border-l-2 sm:border-b-0 md:w-full md:text-left',
+                    'mb-px h-12 w-44 min-w-max rounded-t-md border-slate-400 text-center focus-visible:border-2 focus-visible:border-dashed focus-visible:border-emerald-300 focus-visible:outline-none sm:w-full sm:rounded-t-none sm:rounded-r-md sm:border-l-2 sm:border-b-0 sm:text-left',
                     index == currTab
                       ? 'border-b-0 bg-slate-700 bg-opacity-40 text-emerald-300'
                       : 'border-b-2 text-slate-400',
@@ -73,15 +80,21 @@ const Experience = () => {
                 >
                   {experience.organization}
                 </button>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </div>
         <div className="w-full p-4 sm:grow sm:basis-1/2 md:basis-1/2 lg:basis-2/3">
           {experiences.map((experience, index) => (
-            <div
+            <motion.div
               key={`${experience.organization}${index}`}
               hidden={index !== currTab}
+              animate={currTab !== index ? 'closed' : 'open'}
+              transition={{ type: 'tween', ease: 'easeInOut' }}
+              variants={{
+                open: { opacity: 1, x: 0 },
+                closed: { opacity: 0, x: 100 },
+              }}
             >
               <h3
                 className={classNames(
@@ -119,7 +132,7 @@ const Experience = () => {
                   ))}
                 </ul>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

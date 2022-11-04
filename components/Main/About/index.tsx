@@ -8,6 +8,7 @@ import { classNames } from '../../../helpers/classNames'
 import { jetBrainsMonoRegular, RubikRegular } from '../../../helpers/fonts'
 import MainHeadings from '../../Heading'
 import Section from '../../Section'
+import { motion } from 'framer-motion'
 
 const skills = [
   {
@@ -55,7 +56,13 @@ const About = () => {
     <Section id="about">
       <MainHeadings title="About" />
       <div className="flex flex-col md:flex-row">
-        <div className="md:basis-1/2">
+        <motion.div
+          className="md:basis-1/2"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ type: 'tween', ease: 'easeInOut' }}
+          viewport={{ once: true }}
+        >
           <div className={classNames('text-slate-400', RubikRegular.className)}>
             <p className="mb-3">{contentPara1}</p>
             <p className="mb-3">{contentPara2}</p>
@@ -77,8 +84,14 @@ const About = () => {
               ))}
             </ul>
           </div>
-        </div>
-        <div className="mx-auto mt-8 box-border h-full w-4/5 rounded-md bg-emerald-300 transition-all hover:bg-white md:basis-1/3">
+        </motion.div>
+        <motion.div
+          className="mx-auto mt-8 box-border h-full w-4/5 rounded-md bg-emerald-300 transition-all hover:bg-white md:basis-1/3"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ type: 'tween', ease: 'easeInOut' }}
+          viewport={{ once: true }}
+        >
           <div className="mix-blend-multiply">
             <Image
               src={img}
@@ -93,7 +106,7 @@ const About = () => {
               className="rounded-md"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </Section>
   )

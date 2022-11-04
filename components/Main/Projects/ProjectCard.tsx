@@ -8,6 +8,7 @@ import {
 } from '../../../helpers/fonts'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { motion } from 'framer-motion'
 
 type ProjectCardProps = {
   imgUrl: string
@@ -31,8 +32,15 @@ const ProjectCard = ({
   index,
 }: ProjectCardProps) => {
   return (
-    <li className="relative mb-5 grid grid-cols-12 grid-rows-6 items-center gap-2 last:mb-0 lg:mb-10">
-      <div
+    <motion.li
+      className="relative mb-5 grid grid-cols-12 grid-rows-6 items-center gap-2 last:mb-0 lg:mb-10"
+      initial="init"
+      whileInView="inview"
+      transition={{ type: 'tween', ease: 'easeInOut' }}
+      viewport={{ once: true }}
+      variants={{ init: { opacity: 0, x: -100 }, inview: { opacity: 1, x: 0 } }}
+    >
+      <motion.div
         className={classNames(
           'relative z-20 col-span-full row-span-full p-5',
           index % 2 == 0
@@ -86,7 +94,7 @@ const ProjectCard = ({
         >
           <FontAwesomeIcon icon={faGithub} className="text-2xl" />
         </a>
-      </div>
+      </motion.div>
       <div
         className={classNames(
           'xllg:row-span-full z-10 col-span-full row-span-full h-full rounded-md bg-emerald-300 opacity-5 transition-all md:row-start-2 md:row-end-6 md:opacity-40 md:hover:bg-transparent md:hover:opacity-100',
@@ -107,7 +115,7 @@ const ProjectCard = ({
           />
         </div>
       </div>
-    </li>
+    </motion.li>
   )
 }
 

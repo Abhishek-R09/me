@@ -4,6 +4,7 @@ import React from 'react'
 import { classNames } from '../../../helpers/classNames'
 import { jetBrainsMonoRegular, RubikRegular } from '../../../helpers/fonts'
 import MainHeadings from '../../Heading'
+import { motion } from 'framer-motion'
 
 const ContactMe = () => {
   return (
@@ -12,11 +13,17 @@ const ContactMe = () => {
         title="Get In Touch"
         otherClasses="grow basis-1/2 before:grow before:basis-1/5 after:grow after:basis-1/5"
       />
-      <p className={classNames('mb-10 text-slate-400', RubikRegular.className)}>
+      <motion.p
+        className={classNames('mb-10 text-slate-400', RubikRegular.className)}
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ type: 'tween', ease: 'easeInOut' }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
         Although I’m not currently looking for any new opportunities, my inbox is
         always open. Whether you have a question or just want to say hi, I’ll try my
         best to get back to you!
-      </p>
+      </motion.p>
       <a
         href="mailto:abhishek.ramasubramanian@gmail.com"
         className={classNames(
@@ -27,7 +34,16 @@ const ContactMe = () => {
         Say Hi 👋
       </a>
       <ul className="mt-8 flex w-full items-center justify-center gap-6 md:fixed md:bottom-0 md:left-6 md:mt-0 md:w-12 md:flex-col md:after:h-10 md:after:w-px md:after:bg-slate-400 lg:left-8 lg:w-16">
-        <li>
+        <motion.li
+          initial={{ opacity: 0, y: 100 }}
+          animate="start"
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{ type: 'spring', stiffness: 100 }}
+        >
           <a
             href="https://www.linkedin.com/in/abhishek-ramasubramanian/"
             target="_blank"
@@ -37,8 +53,17 @@ const ContactMe = () => {
           >
             <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
           </a>
-        </li>
-        <li>
+        </motion.li>
+        <motion.li
+          initial={{ opacity: 0, y: 100 }}
+          animate="start"
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{ type: 'spring', stiffness: 75 }}
+        >
           <a
             href="https://github.com/Abhishek-R09"
             target="_blank"
@@ -48,8 +73,17 @@ const ContactMe = () => {
           >
             <FontAwesomeIcon icon={faGithub} className="text-2xl" />
           </a>
-        </li>
-        <li>
+        </motion.li>
+        <motion.li
+          initial={{ opacity: 0, y: 100 }}
+          animate="start"
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{ type: 'spring', stiffness: 50 }}
+        >
           <a
             href="https://twitter.com/abhishekR_09"
             target="_blank"
@@ -59,7 +93,7 @@ const ContactMe = () => {
           >
             <FontAwesomeIcon icon={faTwitter} className="text-2xl" />
           </a>
-        </li>
+        </motion.li>
       </ul>
     </footer>
   )

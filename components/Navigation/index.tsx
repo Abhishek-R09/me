@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { useScrollPosition } from '../../hooks/useScrollPosition'
 import { classNames } from '../../helpers/classNames'
+import { motion } from 'framer-motion'
 
 const navigation = [
   { name: 'About', href: 'about' },
@@ -13,6 +14,20 @@ const navigation = [
   { name: 'Projects', href: 'projects' },
   { name: 'Contact', href: 'contact-me' },
 ]
+
+const variants = {
+  open: { x: 0 },
+  closed: { x: '100%' },
+}
+
+const ulvariants = {
+  open: {
+    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+  },
+  closed: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+  },
+}
 
 const NavigationBar = () => {
   // const [hState, sethState] = useState('top');
@@ -49,12 +64,19 @@ const NavigationBar = () => {
         )}
       >
         <div className="flex items-center justify-center md:flex-1 md:items-stretch md:justify-between">
-          <button
-            className="h-12 w-12 rounded-full p-1 hover:bg-slate-700 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-emerald-300"
+          <motion.button
+            className="z-50 h-12 w-12 rounded-full p-1 hover:bg-slate-700 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-emerald-300"
             onClick={() => scrollToSection('home')}
+            type="button"
+            initial={{ opacity: 0, x: -100 }}
+            animate="start"
+            variants={{
+              start: { opacity: 1, x: 0 },
+            }}
+            transition={{ type: 'spring', stiffness: 100 }}
           >
             <Image src={whiteLogo} alt="Logo" className="rounded-full" />
-          </button>
+          </motion.button>
           <div className="hidden md:ml-6 md:block">
             <div className="flex h-full items-center space-x-4">
               {navigation.map((item) => (
@@ -69,29 +91,60 @@ const NavigationBar = () => {
           </div>
         </div>
       </div>
-      <button
+      <motion.button
         className={classNames(
-          'fixed right-3 top-2 z-50 rounded-md p-2 text-gray-400 transition-all hover:bg-slate-700 hover:text-emerald-300 focus-visible:text-emerald-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-emerald-300 xsm:right-6 md:hidden'
+          'fixed right-3 top-2 z-50 h-12 w-12 rounded-md p-2 text-gray-400 hover:bg-slate-700 hover:text-emerald-300 focus-visible:text-emerald-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-emerald-300 xsm:right-6 md:hidden'
           // hState == 'up' && !open ? '-top-20' : 'top-2'
         )}
+        type="button"
         onClick={() => setOpen((prev) => !prev)}
+        initial={{ opacity: 0, y: -100 }}
+        animate="start"
+        variants={{
+          start: { opacity: 1, y: 0 },
+        }}
+        transition={{ type: 'spring', stiffness: 100 }}
       >
         <span className="sr-only">Open main menu</span>
+        {/* <div
+          className={classNames(
+            'flex h-full flex-col items-center before:h-0.5 before:w-full before:bg-slate-400 after:h-0.5 after:w-full after:bg-slate-400',
+            open
+              ? 'justify-center before:rotate-45 after:-rotate-45'
+              : 'rotate-0 justify-around'
+          )}
+        >
+          <div
+            className={classNames(
+              'h-0.5 w-full bg-slate-400',
+              open ? 'h-0' : 'h-0.5'
+            )}
+          ></div>
+        </div> */}
         {open ? (
           <XMarkIcon className="block h-8 w-8" aria-hidden="true" />
         ) : (
           <Bars3Icon className="block h-8 w-8" aria-hidden="true" />
         )}
-      </button>
-      <aside
+      </motion.button>
+      <motion.aside
         className={classNames(
-          'fixed z-40 flex h-screen w-full transition-all md:hidden',
-          open ? 'right-0' : '-right-full'
+          'fixed z-40 flex h-screen w-full md:hidden'
+          // open ? 'right-0' : '-right-full'
         )}
         hidden={open ? false : true}
+        animate={open ? 'open' : 'closed'}
+        variants={variants}
+        transition={{ type: 'tween', ease: 'easeInOut' }}
       >
-        <div className="h-screen w-2/5 bg-slate-900 bg-opacity-30 backdrop-blur"></div>
-        <div className="ml-auto h-full w-3/5 rounded-l-lg bg-slate-900 px-2 pt-20 pb-3 shadow-xl shadow-black">
+        <motion.div
+          className="h-screen w-2/5 bg-slate-900 bg-opacity-30 backdrop-blur"
+          animate={open ? 'open' : 'closed'}
+        ></motion.div>
+        <motion.div
+          className="ml-auto h-full w-3/5 rounded-l-lg bg-slate-900 px-2 pt-20 pb-3 shadow-xl shadow-black"
+          variants={ulvariants}
+        >
           {navigation.map((item) => (
             <MobileNavigationLink
               key={item.name}
@@ -102,8 +155,8 @@ const NavigationBar = () => {
               tabIndex={open ? 0 : -1}
             />
           ))}
-        </div>
-      </aside>
+        </motion.div>
+      </motion.aside>
     </nav>
   )
 }
