@@ -24,7 +24,7 @@ export default class MyDocument extends Document {
             sizes="16x16"
             href="/static/favicons/favicon-16x16.png"
           />
-          <link rel="manifest" href="/static/favicons/site.webmanifest" />
+          <link rel="manifest" href="/site.webmanifest" />
           <link
             rel="mask-icon"
             href="/static/favicons/safari-pinned-tab.svg"
@@ -32,7 +32,6 @@ export default class MyDocument extends Document {
           />
           <meta name="msapplication-TileColor" content="#0f172a" />
           <meta name="theme-color" content="#0f172a" />
-          <link rel="manifest" href="manifest.json" />
           <meta property="og:type" content="summary" />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:creator" content="@abhishekR_09" />

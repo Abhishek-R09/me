@@ -1,4 +1,4 @@
-import { motion, Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 type SectionPropTypes = {
   children: React.ReactNode
