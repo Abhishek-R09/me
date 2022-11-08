@@ -16,7 +16,7 @@ const CardImage: FunctionComponent<CardImageProps> = ({
   return (
     <div
       className={classNames(
-        'xllg:row-span-full z-10 col-span-full row-span-full h-full rounded-md bg-emerald-300 opacity-5 transition-all md:row-start-2 md:row-end-6 md:opacity-40 md:hover:bg-transparent md:hover:opacity-100',
+        'z-10 col-span-full row-span-full h-full rounded-md bg-sky-200 opacity-5 transition-all md:row-start-2 md:row-end-6 md:opacity-40 md:hover:bg-transparent md:hover:opacity-100 xl:row-span-full',
         index % 2 == 0
           ? 'md:col-start-1 md:col-end-9 lg:col-end-8'
           : 'md:col-span-full md:col-start-5 lg:col-start-6'
@@ -29,6 +29,7 @@ const CardImage: FunctionComponent<CardImageProps> = ({
           title={imgTitle}
           fill={true}
           className="rounded-md object-cover object-left-top"
+          sizes="(min-width: 768px) 60vw,100vw"
         />
       </div>
     </div>

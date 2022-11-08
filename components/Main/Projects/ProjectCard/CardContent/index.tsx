@@ -24,7 +24,7 @@ const CardContent: FunctionComponent<CardContentProps> = ({
   return (
     <motion.div
       className={classNames(
-        'relative z-20 col-span-full row-span-full p-5',
+        'relative z-20 col-span-full row-span-full p-5 shadow-lg md:shadow-none',
         index % 2 == 0
           ? 'md:col-span-full md:col-start-5 md:items-end md:text-right lg:col-start-6'
           : 'md:col-end-9 md:even:col-start-1 lg:col-end-8'

@@ -18,7 +18,7 @@ const LargeLink: FunctionComponent<LargeLinkProps> = ({
       href={link}
       target="_blank"
       className={classNames(
-        'b-1 mx-auto mt-3 block w-fit rounded-md border border-emerald-300 px-6 py-3 text-emerald-300 transition ease-linear hover:bg-emerald-100 hover:bg-opacity-10 focus-visible:bg-emerald-100 focus-visible:bg-opacity-10 focus-visible:outline-none',
+        'b-1 mx-auto mt-3 block w-fit rounded-md border border-amber-300 px-6 py-3 text-amber-300 transition ease-linear selection:bg-amber-200 selection:text-amber-800 hover:bg-amber-200 hover:bg-opacity-10 focus-visible:bg-amber-100 focus-visible:bg-opacity-10 focus-visible:outline-none',
         jetBrainsMonoRegular.className,
         className
       )}

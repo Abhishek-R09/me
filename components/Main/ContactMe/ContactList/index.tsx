@@ -25,7 +25,7 @@ const contacts = [
 
 const ContactList = () => {
   return (
-    <ul className="mt-8 flex w-full items-center justify-center gap-6 md:fixed md:bottom-0 md:left-6 md:mt-0 md:w-12 md:flex-col md:after:h-10 md:after:w-px md:after:bg-slate-400 lg:left-8 lg:w-16">
+    <ul className="mt-8 flex w-full items-center justify-center gap-6 md:fixed md:bottom-0 md:left-6 md:mt-0 md:w-12 md:flex-col md:after:h-10 md:after:w-px md:after:bg-amber-300 lg:left-8 lg:w-16">
       {contacts.map((contact) => (
         <Contact key={contact.label} {...contact} />
       ))}

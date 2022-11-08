@@ -14,7 +14,7 @@ const ContactMe = () => {
         otherClasses="grow basis-1/2 before:grow before:basis-1/5 after:grow after:basis-1/5"
       />
       <motion.p
-        className={classNames('mb-10 text-slate-400', RubikRegular.className)}
+        className={classNames('mb-10 text-sky-200', RubikRegular.className)}
         initial={{ opacity: 0, y: 100 }}
         transition={{ type: 'tween', ease: 'easeInOut' }}
         whileInView={{ opacity: 1, y: 0 }}

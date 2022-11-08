@@ -4,7 +4,7 @@ import { aboutContent } from './text'
 
 const Content = () => {
   return (
-    <div className={classNames('text-slate-400', RubikRegular.className)}>
+    <div className={classNames('text-sky-200', RubikRegular.className)}>
       {aboutContent.map((c) => (
         <p key={c} className="mb-3">
           {c}

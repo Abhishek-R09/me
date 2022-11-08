@@ -18,7 +18,7 @@ const Intro = () => {
       <div className="md:text-center">
         <p
           className={classNames(
-            'mb-3 leading-snug text-emerald-300 xsm:text-base sm:text-lg xl:text-xl',
+            'mb-3 leading-snug text-amber-300 selection:bg-amber-200 selection:text-amber-800 xsm:text-base sm:text-lg xl:text-xl',
             jetBrainsMonoRegular.className
           )}
         >
@@ -26,7 +26,7 @@ const Intro = () => {
         </p>
         <h1
           className={classNames(
-            'mb-3 text-2xl text-slate-300 xsm:text-3xl sm:text-4xl xl:text-5xl',
+            'mb-3 text-2xl text-sky-100 xsm:text-3xl sm:text-4xl xl:text-5xl',
             RubikBold.className
           )}
         >
@@ -34,7 +34,7 @@ const Intro = () => {
         </h1>
         <h1
           className={classNames(
-            'mb-3 text-2xl text-slate-400 xsm:text-3xl sm:text-4xl xl:text-5xl',
+            'mb-3 text-2xl text-sky-200 xsm:text-3xl sm:text-4xl xl:text-5xl',
             RubikBold.className
           )}
         >
@@ -42,7 +42,7 @@ const Intro = () => {
         </h1>
         <p
           className={classNames(
-            'text-md mb-6 text-slate-400 xsm:text-base sm:text-lg xl:text-xl',
+            'text-md mb-6 text-sky-200 xsm:text-base sm:text-lg xl:text-xl',
             RubikRegular.className
           )}
         >
@@ -54,7 +54,7 @@ const Intro = () => {
           href="https://drive.google.com/file/d/122D_oWvFF9-pet9neCNXPW40OVTWWlRk/view?usp=share_link"
           target="_blank"
           className={classNames(
-            'b-1 mt-3 rounded-md border border-emerald-300 px-6 py-3 text-sm text-emerald-300 transition ease-linear hover:bg-emerald-100 hover:bg-opacity-10 focus-visible:bg-emerald-100 focus-visible:bg-opacity-10 focus-visible:outline-none xsm:text-base sm:text-lg xl:text-xl',
+            'b-1 mt-3 rounded-md border border-amber-300 px-6 py-3 text-sm text-amber-300 transition ease-linear selection:bg-amber-200 selection:text-amber-800 hover:bg-amber-200 hover:bg-opacity-10 focus-visible:bg-emerald-100 focus-visible:bg-opacity-10 focus-visible:outline-none xsm:text-base sm:text-lg xl:text-xl',
             jetBrainsMonoRegular.className
           )}
         >

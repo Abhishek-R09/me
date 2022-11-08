@@ -12,7 +12,7 @@ const Hamburger: FunctionComponent<HamburgerProps> = ({ open, handleSidebar }) =
   return (
     <motion.button
       className={classNames(
-        'fixed right-3 top-2 z-50 h-12 w-12 rounded-md p-2 text-gray-400 hover:bg-slate-700 hover:text-emerald-300 focus-visible:text-emerald-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-emerald-300 xsm:right-6 md:hidden'
+        'fixed right-3 top-2 z-50 h-12 w-12 rounded-md p-2 text-sky-200 hover:bg-amber-200 hover:bg-opacity-10 hover:text-amber-300 focus-visible:bg-amber-200 focus-visible:bg-opacity-10 focus-visible:text-amber-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-amber-300 xsm:right-6 md:hidden'
       )}
       type="button"
       onClick={handleSidebar}

@@ -10,7 +10,7 @@ const Middle: FunctionComponent<MiddleProps> = ({ projDesc }) => {
   return (
     <p
       className={classNames(
-        'mb-3 rounded-md text-slate-400',
+        'mb-3 rounded-md text-sky-200 shadow-lg',
         RubikRegular.className,
         'md:bg-slate-800 md:p-5'
       )}

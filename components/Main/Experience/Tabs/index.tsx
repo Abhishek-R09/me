@@ -16,7 +16,7 @@ const Tabs = () => {
         <div className="absolute top-11 left-0 z-10 w-full sm:top-0 sm:left-0 sm:h-full sm:w-1">
           <div
             className={classNames(
-              ' bg-emerald-300 transition-all',
+              ' bg-amber-300 transition-all',
               'h-1 w-44 sm:ml-0 sm:h-12 sm:w-1',
               currTab == 0
                 ? 'ml-0 sm:mt-0'

@@ -11,13 +11,13 @@ const Top: FunctionComponent<TopProps> = ({ projName }) => {
     <>
       <p
         className={classNames(
-          'mb-1 text-emerald-300',
+          'mb-1 text-amber-300 selection:bg-amber-200 selection:text-amber-800',
           jetBrainsMonoRegular.className
         )}
       >
         Featured
       </p>
-      <h3 className={classNames('mb-3 text-lg text-slate-300', RubikBold.className)}>
+      <h3 className={classNames('mb-3 text-lg text-sky-100', RubikBold.className)}>
         {projName}
       </h3>
     </>
