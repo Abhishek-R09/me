@@ -28,8 +28,8 @@ const TabPanel = ({
 }: TabPanelProps) => (
   <motion.div
     role="tabpanel"
-    id={`experience-tabpanel-${tabIndex}`}
-    aria-labelledby={`tab-panel-${tabIndex}`}
+    id={`tabpanel-${tabIndex}`}
+    aria-labelledby={`tabpanel-${tabIndex}`}
     tabIndex={0}
     hidden={tabIndex !== currTab}
     animate={currTab !== tabIndex ? 'closed' : 'open'}

@@ -3,18 +3,12 @@ import { useScrollPosition } from '../../hooks/useScrollPosition'
 import MobileSidebar from './MobileSidebar'
 import Hamburger from './Hamburger'
 import TopBar from './TopBar'
+import { navigation } from './links'
 
 export interface navigationType {
   name: string
   href: string
 }
-
-const navigation = [
-  { name: 'About', href: 'about' },
-  { name: 'Experience', href: 'experience' },
-  { name: 'Projects', href: 'projects' },
-  { name: 'Contact', href: 'contact-me' },
-]
 
 const NavigationBar = () => {
   const [open, setOpen] = useState(false)

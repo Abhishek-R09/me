@@ -27,9 +27,9 @@ const Tab: FunctionComponent<TabProps> = ({
       <button
         type="button"
         role="tab"
-        id={`experience-tab-${index}`}
-        aria-selected={index == currTab}
-        aria-controls={`tab-panel-${index}`}
+        id={`tab-${index}`}
+        aria-selected={index === currTab}
+        aria-controls={`tabpanel-${index}`}
         className={classNames(
           'h-12 w-44 min-w-max rounded-t-md border-slate-400 text-center focus-visible:border-2 focus-visible:border-dashed focus-visible:border-emerald-300 focus-visible:outline-none sm:w-full sm:rounded-t-none sm:rounded-r-md sm:border-l-2 sm:border-b-0 sm:text-left',
           index == currTab
