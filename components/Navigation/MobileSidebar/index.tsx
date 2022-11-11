@@ -33,16 +33,18 @@ const MobileSidebar: FunctionComponent<MobileSidebarProps> = ({
 }) => {
   return (
     <motion.aside
-      className={classNames('fixed z-40 flex h-screen w-full md:hidden')}
+      className={classNames(
+        'fixed z-40 flex h-screen w-full backdrop-blur-sm md:hidden'
+      )}
       hidden={open ? false : true}
       animate={open ? 'open' : 'closed'}
       variants={variants}
       transition={{ type: 'tween', ease: 'easeInOut' }}
     >
-      <motion.div
+      {/* <motion.div
         className="h-screen w-2/5 bg-slate-900 bg-opacity-30 backdrop-blur"
         animate={open ? 'open' : 'closed'}
-      ></motion.div>
+      ></motion.div> */}
       <motion.div
         className="ml-auto h-full w-3/5 rounded-l-lg bg-slate-900 px-2 pt-20 pb-3 shadow-xl shadow-black"
         variants={ulvariants}

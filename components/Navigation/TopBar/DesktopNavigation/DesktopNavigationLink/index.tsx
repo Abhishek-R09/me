@@ -18,7 +18,7 @@ const DesktopNavigationLink = ({
       onClick={() => scrollFunc(href)}
       type="button"
       className={classNames(
-        'text-sky-200 transition-colors hover:bg-amber-200 hover:bg-opacity-10 hover:text-amber-300 focus-visible:text-amber-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-amber-300',
+        'text-amber-100 transition-colors hover:bg-amber-200 hover:bg-opacity-10 hover:text-amber-300 focus-visible:bg-amber-200 focus-visible:bg-opacity-10 focus-visible:text-amber-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-amber-300 lg:text-lg',
         'rounded-md px-3 py-2 text-base font-medium hover:cursor-pointer',
         RubikRegular.className
       )}

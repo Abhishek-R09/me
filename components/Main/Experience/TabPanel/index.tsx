@@ -38,14 +38,14 @@ const TabPanel = ({
       open: { opacity: 1, x: 0 },
       closed: { opacity: 0, x: -100 },
     }}
-    className="p-2 focus:outline-dashed focus:outline-1 focus:outline-amber-300 xsm:p-4"
+    className="p-2 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-amber-300 xsm:p-4"
   >
-    <h3 className={classNames('mb-1 text-lg text-sky-100', RubikBold.className)}>
+    <h3 className={classNames('mb-1 text-lg text-amber-200', RubikBold.className)}>
       {position}
     </h3>
     <h4
       className={classNames(
-        'mb-2 text-lg text-amber-300 selection:bg-amber-200 selection:text-amber-800',
+        'mb-2 text-lg text-amber-300 selection:bg-amber-200 selection:text-amber-900',
         RubikBold.className
       )}
     >
@@ -53,7 +53,7 @@ const TabPanel = ({
     </h4>
     <p
       className={classNames(
-        'mb-2 text-sm text-sky-200',
+        'mb-2 text-sm text-amber-100',
         jetBrainsMonoRegular.className
       )}
     >
@@ -64,7 +64,7 @@ const TabPanel = ({
         {description.map((desc) => (
           <li
             key={desc}
-            className="relative mb-2 pl-7 text-sky-200 before:absolute before:left-0 before:text-amber-300 before:content-['▹']"
+            className="relative mb-2 pl-7 text-amber-100 before:absolute before:left-0 before:text-amber-300 before:content-['▹']"
           >
             {desc}
           </li>

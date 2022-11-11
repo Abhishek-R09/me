@@ -8,7 +8,7 @@ const Home = () => (
       <title>Abhishek Ramasubramanian</title>
     </Head>
 
-    <div className="bg-slate-900 text-sky-200 selection:bg-slate-200 selection:text-slate-800">
+    <div className="bg-slate-900 text-amber-100 selection:bg-amber-100 selection:text-amber-900">
       <NavigationBar />
       <Main />
     </div>

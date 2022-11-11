@@ -8,13 +8,13 @@ import MailLink from './MailLink'
 
 const ContactMe = () => {
   return (
-    <footer id="contact-me" className="m-auto mt-20 max-w-4xl pb-20 md:relative">
+    <footer id="contact-me" className="m-auto max-w-4xl pt-24 pb-20 md:relative">
       <MainHeadings
         title="Get In Touch"
         otherClasses="grow basis-1/2 before:grow before:basis-1/5 after:grow after:basis-1/5"
       />
       <motion.p
-        className={classNames('mb-10 text-sky-200', RubikRegular.className)}
+        className={classNames('mb-10 text-amber-100', RubikRegular.className)}
         initial={{ opacity: 0, y: 100 }}
         transition={{ type: 'tween', ease: 'easeInOut' }}
         whileInView={{ opacity: 1, y: 0 }}

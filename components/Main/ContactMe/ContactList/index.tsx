@@ -17,7 +17,7 @@ const contacts = [
   },
   {
     icon: <FontAwesomeIcon icon={faTwitter} className="text-2xl" />,
-    link: 'https://twitter.com/abhishekR_09',
+    link: 'https://twitter.com/_abhish1_',
     label: 'Abhishek Ramasubramanian on Twitter',
     stiffness: 50,
   },

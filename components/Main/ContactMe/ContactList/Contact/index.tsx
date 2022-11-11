@@ -30,7 +30,7 @@ const Contact: FunctionComponent<ContactProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         aria-label={label}
-        className="flex rounded-md p-2 text-sky-200 transition-colors hover:text-amber-300 focus-visible:bg-amber-200 focus-visible:bg-opacity-10 focus-visible:text-amber-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-amber-300"
+        className="flex rounded-md p-2 text-amber-100 transition-colors hover:text-amber-200 focus-visible:bg-amber-100 focus-visible:bg-opacity-10 focus-visible:text-amber-200 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-amber-300"
       >
         {icon}
       </a>
