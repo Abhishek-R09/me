@@ -19,7 +19,7 @@ const Bottom: FunctionComponent<BottomProps> = ({ index, techUsed }) => {
         <li
           key={tech}
           className={classNames(
-            'mb-1 mr-1 text-amber-200',
+            'mb-1 mr-3 text-amber-200 last:mr-0',
             jetBrainsMonoRegular.className
           )}
         >

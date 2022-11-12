@@ -6,6 +6,7 @@ import {
   RubikBold,
   RubikRegular,
 } from '../../../../helpers/fonts'
+import ExternalLink from '../../../ExternalLink'
 
 type TabPanelProps = {
   currTab: number
@@ -15,6 +16,7 @@ type TabPanelProps = {
   from: string
   to: string
   description: string[]
+  organizationLink: string
 }
 
 const TabPanel = ({
@@ -25,6 +27,7 @@ const TabPanel = ({
   from,
   to,
   description,
+  organizationLink,
 }: TabPanelProps) => (
   <motion.div
     role="tabpanel"
@@ -49,7 +52,7 @@ const TabPanel = ({
         RubikBold.className
       )}
     >
-      {organization}
+      <ExternalLink text={organization} link={organizationLink} />
     </h4>
     <p
       className={classNames(

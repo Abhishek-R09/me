@@ -4,6 +4,18 @@ import pharmacyProjImg from '../../../public/static/images/pharmacyProjImg.jpg'
 
 export const projects = [
   {
+    projName: 'FarmTrade',
+    type: 'Personal',
+    projDesc: `A task app made for storing simple task lists. 
+            This is made purely using React. It's a template for making frontend for task apps. 
+            The app features task lists which can contain sub tasks. Each sub task can have an 
+            associated content and a timestamp.`,
+    imgUrl: todoAppProj,
+    imgTitle: 'Home page of Task App',
+    projLink: 'https://github.com/Abhishek-R09/Farm-Trade',
+    techUsed: ['Next.js', 'REST APIs', 'MongoDB', 'Material UI'],
+  },
+  {
     projName: 'Task App',
     type: 'Personal',
     projDesc: `A task app made for storing simple task lists. 

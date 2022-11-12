@@ -56,6 +56,7 @@ const Tabs = () => {
             to={experience.to}
             description={experience.description}
             tabIndex={index}
+            organizationLink={experience.link}
           />
         ))}
       </div>

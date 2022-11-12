@@ -5,6 +5,7 @@ import {
   RubikBold,
   RubikRegular,
 } from '../../../helpers/fonts'
+import ExternalLink from '../../ExternalLink'
 
 const Intro = () => {
   return (
@@ -46,9 +47,12 @@ const Intro = () => {
             RubikRegular.className
           )}
         >
-          I’m a student and upcoming Technology Analyst Intern at Morgan Stanley. I
-          focus on building things on the client side and occasionally develop
-          backend software.
+          {`I’m a student and upcoming Technology Analyst Intern at `}
+          <ExternalLink
+            text="Morgan Stanley"
+            link="https://www.morganstanley.com/"
+          />
+          {`. I primarily work on the client side software and occasionally develop server side software.`}
         </p>
         <a
           href="https://drive.google.com/file/d/122D_oWvFF9-pet9neCNXPW40OVTWWlRk/view?usp=share_link"
