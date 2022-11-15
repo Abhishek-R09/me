@@ -22,27 +22,29 @@ export type HomePageProps = {
   }[]
 }
 
-const Home = ({ repos }: HomePageProps) => (
-  <>
-    <Head>
-      <title>Abhishek Ramasubramanian</title>
-    </Head>
+export default function Home({ repos }: HomePageProps) {
+  return (
+    <>
+      <Head>
+        <title>Abhishek Ramasubramanian</title>
+      </Head>
 
-    <div className="bg-slate-900 text-amber-100 selection:bg-amber-100 selection:text-amber-900">
-      <NavigationBar />
-      <main className="mx-auto rounded-md py-0 px-5 xsm:px-8 md:px-24 lg:px-36">
-        <Intro />
-        <About />
-        <Experience />
-        <Projects repos={repos} />
-        <ContactMe />
-      </main>
-    </div>
-  </>
-)
+      <div className="bg-slate-900 text-amber-100 selection:bg-amber-100 selection:text-amber-900">
+        <NavigationBar />
+        <main className="mx-auto rounded-md py-0 px-5 xsm:px-8 md:px-24 lg:px-36">
+          <Intro />
+          <About />
+          <Experience />
+          <Projects repos={repos} />
+          <ContactMe />
+        </main>
+      </div>
+    </>
+  )
+}
 
-export const getStaticProps = async () => {
-  const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
+export async function getServerSideProps() {
+  const octokit = new Octokit({ auth: process.env.TOKEN })
 
   const res = await octokit.request('GET /users/{username}/repos', {
     username: 'Abhishek-R09',
@@ -74,4 +76,4 @@ export const getStaticProps = async () => {
   }
 }
 
-export default Home
+// export default Home
