@@ -65,26 +65,18 @@ export default function Document() {
         />
         <meta property="og:image" content="/static/images/cover.png" />
 
-        {/* <meta property="og:type" content="summary" /> */}
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:type" content="summary_large_image" />
         <meta name="twitter:creator" content="@_abhish1_" />
-
-        {/* <meta property="og:title" content="Check out my website!" /> */}
-        {/* <meta
-            property="og:description"
-            content="Portfolio Website of Abhishek Ramasubramanian, 
-                a Computer Science student currently studying in Vellore Institute of Technology, Vellore, 
-                Tamil Nadu, India. He's passionate about web development and cloud computing."
-          /> */}
-        {/* <meta
-            property="og:image"
-            content="https://www.abhishekr.dev/static/images/introBgPresentation.jpg"
-          /> */}
-        {/* <meta property="og:image:alt" content="Coding in an aeroplane" />
+        <meta
+          property="og:image:alt"
+          content="Landing Page view of Abhishek R's website"
+        />
+        <meta
+          property="twitter:image:alt"
+          content="Landing Page view of Abhishek R's website"
+        />
         <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" /> */}
-
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:image:height" content="630" />
         <meta
           property="twitter:domain"
           content="abhishekr-git-v2-abhishek-r09.vercel.app"
