@@ -11,7 +11,7 @@ const Bottom: FunctionComponent<BottomProps> = ({ index, techUsed }) => {
   return (
     <ul
       className={classNames(
-        'flex list-none flex-wrap',
+        'mb-2 flex list-none flex-wrap gap-x-6 gap-y-2',
         index % 2 == 0 ? 'md:justify-end' : 'md:justify-start'
       )}
     >
@@ -19,8 +19,9 @@ const Bottom: FunctionComponent<BottomProps> = ({ index, techUsed }) => {
         <li
           key={tech}
           className={classNames(
-            'mb-1 mr-3 text-amber-200 last:mr-0',
+            'text-amber-200 last:mr-0',
             jetBrainsMonoRegular.className
+            // index % 2 == 0 ? 'ml-6 last:ml-0' : 'mr-6 last:mr-0'
           )}
         >
           {tech}

@@ -37,8 +37,8 @@ const MobileNavigationLink = ({
   return (
     <motion.button
       className={classNames(
-        'w-full text-amber-100 transition-colors hover:bg-amber-200 hover:bg-opacity-10 hover:text-amber-300',
-        'block rounded-md px-3 py-2 text-base font-medium focus-visible:text-amber-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-amber-300',
+        'w-full text-amber-100 outline-none transition-colors hover:bg-amber-200 hover:bg-opacity-10 hover:text-amber-300',
+        'block rounded-md px-3 py-2 text-base font-medium focus-visible:bg-amber-200 focus-visible:bg-opacity-10 focus-visible:text-amber-300 focus-visible:outline-none',
         RubikRegular.className
       )}
       tabIndex={tabIndex}

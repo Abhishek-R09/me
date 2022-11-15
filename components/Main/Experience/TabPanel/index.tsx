@@ -67,7 +67,7 @@ const TabPanel = ({
         {description.map((desc) => (
           <li
             key={desc}
-            className="relative mb-2 pl-7 text-amber-100 before:absolute before:left-0 before:text-amber-300 before:content-['▹']"
+            className="relative mb-2 pl-7 text-amber-100 before:absolute before:left-0 before:text-amber-300 before:content-['→']"
           >
             {desc}
           </li>

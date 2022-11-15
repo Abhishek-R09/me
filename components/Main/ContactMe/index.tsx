@@ -10,7 +10,7 @@ const ContactMe = () => {
   return (
     <footer id="contact-me" className="m-auto max-w-4xl pt-24 pb-20 md:relative">
       <MainHeadings
-        title="Get In Touch"
+        title="Let's Connect"
         otherClasses="grow basis-1/2 before:grow before:basis-1/5 after:grow after:basis-1/5"
       />
       <motion.p
@@ -20,9 +20,7 @@ const ContactMe = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        Although I’m not currently looking for any new opportunities, my inbox is
-        always open. Whether you have a question or just want to say hi, I’ll try my
-        best to get back to you!
+        {`Reach out to me by clicking on the below link through email or social IDs. Feel free to contact me for any discussion or new ideas. My inbox remains open for the same. I'll do my best to revert.`}
       </motion.p>
       <MailLink text="Say Hi" link="mailto:abhishek.ramasubramanian@gmail.com" />
       <ContactList />

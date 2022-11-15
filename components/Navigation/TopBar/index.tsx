@@ -26,7 +26,7 @@ const TopBar: FunctionComponent<TopBarProps> = ({
     >
       <div className="flex items-center justify-center md:flex-1 md:items-stretch md:justify-between xl:max-w-6xl">
         <motion.button
-          className="z-50 h-12 w-12 rounded-full p-1 transition-colors hover:bg-amber-200 hover:bg-opacity-50 focus-visible:bg-amber-200 focus-visible:bg-opacity-10 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-amber-300 lg:h-16 lg:w-16"
+          className="z-50 h-12 w-12 rounded-full p-1 outline-none transition-colors hover:bg-amber-200 hover:bg-opacity-50 focus-visible:bg-amber-200 focus-visible:bg-opacity-10 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-amber-300 lg:h-16 lg:w-16"
           onClick={() => scrollToSection('home')}
           type="button"
           initial={{ opacity: 0, x: -100 }}

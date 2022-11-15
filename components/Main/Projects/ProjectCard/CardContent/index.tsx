@@ -12,6 +12,7 @@ interface CardContentProps {
   projLink: string
   index: number
   techUsed: string[]
+  website: string | null
 }
 
 const CardContent: FunctionComponent<CardContentProps> = ({
@@ -20,6 +21,7 @@ const CardContent: FunctionComponent<CardContentProps> = ({
   projLink,
   index,
   techUsed,
+  website,
 }) => {
   return (
     <motion.div
@@ -33,7 +35,12 @@ const CardContent: FunctionComponent<CardContentProps> = ({
       <Top projName={projName} />
       <Middle projDesc={projDesc} />
       <Bottom techUsed={techUsed} index={index} />
-      <CardActions projLink={projLink} projName={projName} />
+      <CardActions
+        projLink={projLink}
+        projName={projName}
+        website={website}
+        index={index}
+      />
     </motion.div>
   )
 }

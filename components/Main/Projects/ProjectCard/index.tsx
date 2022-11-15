@@ -12,6 +12,7 @@ type ProjectCardProps = {
   projDesc: string
   techUsed: string[]
   index: number
+  website: string | null
 }
 
 const ProjectCard = ({
@@ -22,6 +23,7 @@ const ProjectCard = ({
   projDesc,
   techUsed,
   index,
+  website,
 }: ProjectCardProps) => {
   return (
     <motion.li
@@ -38,6 +40,7 @@ const ProjectCard = ({
         projDesc={projDesc}
         projLink={projLink}
         index={index}
+        website={website}
       />
       <CardImage imgUrl={imgUrl} imgTitle={imgTitle} index={index} />
     </motion.li>
