@@ -64,23 +64,16 @@ export default function Document() {
           content="Portfolio Website of Abhishek Ramasubramanian, a passionate computer science student currently studying in Vellore Institute of Technology, Vellore."
         />
         <meta property="og:image" content="/static/images/cover.png" />
-
-        <meta property="og:type" content="summary_large_image" />
-        <meta name="twitter:creator" content="@_abhish1_" />
         <meta
           property="og:image:alt"
           content="Landing Page view of Abhishek R's website"
         />
-        <meta
-          property="twitter:image:alt"
-          content="Landing Page view of Abhishek R's website"
-        />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta
-          property="twitter:domain"
-          content="abhishekr-git-v2-abhishek-r09.vercel.app"
-        />
+        {/* <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" /> */}
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@_abhish1_" />
+        <meta property="twitter:domain" content="/" />
         <meta property="twitter:url" content="/" />
         <meta name="twitter:title" content="Abhishek Ramasubramanian" />
         <meta
@@ -88,6 +81,10 @@ export default function Document() {
           content="Portfolio Website of Abhishek Ramasubramanian, a passionate computer science student currently studying in Vellore Institute of Technology, Vellore."
         />
         <meta name="twitter:image" content="/static/images/cover.png" />
+        <meta
+          property="twitter:image:alt"
+          content="Landing Page view of Abhishek R's website"
+        />
       </Head>
       <body>
         <Main />
