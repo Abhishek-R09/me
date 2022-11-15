@@ -63,7 +63,10 @@ export default function Document() {
           property="og:description"
           content="Portfolio Website of Abhishek Ramasubramanian, a passionate computer science student currently studying in Vellore Institute of Technology, Vellore."
         />
-        <meta property="og:image" content="/static/images/cover.png" />
+        <meta
+          property="og:image"
+          content="https://www.abhishekr.dev/static/images/cover.png"
+        />
         <meta
           property="og:image:alt"
           content="Landing Page view of Abhishek R's website"
@@ -73,14 +76,17 @@ export default function Document() {
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@_abhish1_" />
-        <meta property="twitter:domain" content="/" />
-        <meta property="twitter:url" content="/" />
+        <meta property="twitter:domain" content="abhishekr.dev" />
+        <meta property="twitter:url" content="https://www.abhishekr.dev/" />
         <meta name="twitter:title" content="Abhishek Ramasubramanian" />
         <meta
           name="twitter:description"
           content="Portfolio Website of Abhishek Ramasubramanian, a passionate computer science student currently studying in Vellore Institute of Technology, Vellore."
         />
-        <meta name="twitter:image" content="/static/images/cover.png" />
+        <meta
+          name="twitter:image"
+          content="https://www.abhishekr.dev/static/images/cover.png"
+        />
         <meta
           property="twitter:image:alt"
           content="Landing Page view of Abhishek R's website"
