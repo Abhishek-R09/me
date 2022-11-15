@@ -42,7 +42,7 @@ const Home = ({ repos }: HomePageProps) => (
 )
 
 export const getStaticProps = async () => {
-  const octokit = new Octokit({ auth: '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' })
+  const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 
   const res = await octokit.request('GET /users/{username}/repos', {
     username: 'Abhishek-R09',
