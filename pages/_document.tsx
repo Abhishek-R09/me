@@ -9,46 +9,44 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="shortcut icon" href="/static/favicons/favicon.ico?v=2" />
+        <link rel="shortcut icon" href="/static/favicons/favicon.ico?v=3" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/static/favicons/apple-touch-icon.png?v=2"
+          href="/static/favicons/apple-touch-icon.png?v=3"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/static/favicons/favicon-32x32.png?v=2"
+          href="/static/favicons/favicon-32x32.png?v=3"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/static/favicons/favicon-16x16.png?v=2"
+          href="/static/favicons/favicon-16x16.png?v=3"
         />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="194x194"
-          href="/static/favicons/favicon-194x194.png?v=2"
-        ></link>
-        <link rel="manifest" href="/site.webmanifest?v=2" />
+        <link rel="manifest" href="/site.webmanifest?v=3" />
         <link
           rel="mask-icon"
-          href="/static/favicons/safari-pinned-tab.svg?v=2"
+          href="/static/favicons/safari-pinned-tab.svg?v=3"
           color="#0f172a"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="192x192"
-          href="/static/favicons/android-chrome-192x192.png?v=2"
+          href="/static/favicons/android-chrome-192x192.png?v=3"
         ></link>
         <meta name="msapplication-TileColor" content="#0f172a" />
         <meta
           name="msapplication-TileImage"
-          content="/static/favicons/mstile-144x144.png?v=2"
+          content="/static/favicons/mstile-150x150.png?v=3"
+        />
+        <meta
+          name="msapplication-config"
+          content="/static/favicons/browserconfig.xml?v=3"
         />
         <meta name="theme-color" content="#0f172a" />
         <meta

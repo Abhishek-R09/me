@@ -5,10 +5,11 @@ import MainHeadings from '../../Heading'
 import { motion } from 'framer-motion'
 import ContactList from './ContactList'
 import MailLink from './MailLink'
+import ExternalLink from '../../ExternalLink'
 
 const ContactMe = () => {
   return (
-    <footer id="contact-me" className="m-auto max-w-4xl pt-24 pb-20 md:relative">
+    <footer id="contact-me" className="m-auto max-w-4xl pt-24 pb-5 md:relative">
       <MainHeadings
         title="Let's Connect"
         otherClasses="grow basis-1/2 before:grow before:basis-1/5 after:grow after:basis-1/5"
@@ -24,6 +25,12 @@ const ContactMe = () => {
       </motion.p>
       <MailLink text="Say Hi" link="mailto:abhishek.ramasubramanian@gmail.com" />
       <ContactList />
+      <small
+        className={classNames('mt-10 block text-center', RubikRegular.className)}
+      >
+        Design inspired from{' '}
+        <ExternalLink link="https://brittanychiang.com/" text="Brittany Chiang" />
+      </small>
     </footer>
   )
 }
