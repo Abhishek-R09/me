@@ -13,6 +13,7 @@ interface CardContentProps {
   index: number
   techUsed: string[]
   website: string | null
+  showFullImage: () => void
 }
 
 const CardContent: FunctionComponent<CardContentProps> = ({
@@ -22,14 +23,15 @@ const CardContent: FunctionComponent<CardContentProps> = ({
   index,
   techUsed,
   website,
+  showFullImage,
 }) => {
   return (
     <motion.div
       className={classNames(
-        'relative z-20 col-span-full row-span-full p-5 shadow-lg md:shadow-none',
+        'relative z-20 col-span-full row-span-full p-5 shadow-lg md:p-5 md:shadow-none',
         index % 2 == 0
-          ? 'md:col-span-full md:col-start-5 md:items-end md:text-right lg:col-start-6'
-          : 'md:col-end-9 md:even:col-start-1 lg:col-end-8'
+          ? 'md:col-span-full md:col-start-5 md:items-end md:pr-0 md:text-right lg:col-start-6'
+          : 'md:col-start-1 md:col-end-9 md:pl-0 lg:col-end-8'
       )}
     >
       <Top projName={projName} />
@@ -40,6 +42,7 @@ const CardContent: FunctionComponent<CardContentProps> = ({
         projName={projName}
         website={website}
         index={index}
+        showFullImage={showFullImage}
       />
     </motion.div>
   )
