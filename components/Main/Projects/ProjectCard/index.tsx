@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { StaticImageData } from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
 import CardImage from './CardImage'
@@ -39,15 +39,6 @@ const ProjectCard = ({
     setShown(false)
   }
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setShown(true)
-  //   }, 5000)
-  //   return () => {
-  //     clearTimeout(timer)
-  //   }
-  // }, [fullImage])
-
   return (
     <motion.li
       className="relative mb-5 grid grid-cols-12 grid-rows-6 items-center gap-2 last:mb-0 lg:mb-10"
@@ -84,6 +75,7 @@ const ProjectCard = ({
           >
             <span className="flex">Click the image to close</span>
             <button
+              type="button"
               className="rounded-md p-1 text-amber-100 outline-none transition-all hover:text-amber-200 focus-visible:bg-amber-100 focus-visible:bg-opacity-10 focus-visible:text-amber-200 focus-visible:outline-none"
               title="Close this message"
               onClick={() => setShown(true)}

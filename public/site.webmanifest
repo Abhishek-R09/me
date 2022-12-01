@@ -82,5 +82,6 @@
   "start_url": "/",
   "lang": "en-US",
   "orientation": "any",
-  "id": "/"
+  "id": "/",
+  "prefer_related_applications": false
 }
