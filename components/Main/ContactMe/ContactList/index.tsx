@@ -15,12 +15,12 @@ const contacts = [
     label: 'Abhishek Ramasubramanian on GitHub',
     stiffness: 75,
   },
-  {
-    icon: <FontAwesomeIcon icon={faTwitter} className="text-2xl" />,
-    link: 'https://twitter.com/abhish1_r',
-    label: 'Abhishek Ramasubramanian on Twitter',
-    stiffness: 50,
-  },
+  // {
+  //   icon: <FontAwesomeIcon icon={faTwitter} className="text-2xl" />,
+  //   link: 'https://twitter.com/abhish1_r',
+  //   label: 'Abhishek Ramasubramanian on Twitter',
+  //   stiffness: 50,
+  // },
 ]
 
 const ContactList = () => {

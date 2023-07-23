@@ -33,29 +33,33 @@ const Intro = () => {
         >
           Abhishek Ramasubramanian.
         </h1>
-        <h1
+        {/* <h1
           className={classNames(
             'mb-3 text-2xl text-amber-100 xsm:text-3xl sm:text-4xl xl:text-5xl',
             RubikBold.className
           )}
         >
           I develop things for the web.
-        </h1>
+        </h1> */}
         <p
           className={classNames(
             'text-md mb-6 text-amber-100 xsm:text-base sm:text-lg xl:text-xl',
             RubikRegular.className
           )}
         >
-          {`I’m a student and upcoming Technology Analyst Intern at `}
+          {`I’m a recent graduate from `}{' '}
+          <ExternalLink text="VIT, Vellore" link="https://vit.ac.in/" />
+          {` with internship experience of 8 months at `}
           <ExternalLink
             text="Morgan Stanley"
             link="https://www.morganstanley.com/"
           />
-          {`. I primarily work on the client side software and occasionally develop server side software.`}
+          {` and `}
+          <ExternalLink text="Fiserv" link="https://www.fiserv.com/" />
+          {`.  I am actively seeking new opportunities in entry-level software development engineer roles.`}
         </p>
         <a
-          href="https://drive.google.com/file/d/122D_oWvFF9-pet9neCNXPW40OVTWWlRk/view?usp=share_link"
+          href="https://drive.google.com/file/d/1w8j450AqiykfnSzHyVZci-QG7gELshV2/view?usp=drive_link"
           target="_blank"
           className={classNames(
             'b-1 mt-3 rounded-md border border-amber-300 px-6 py-3 text-sm text-amber-300 transition ease-linear selection:bg-amber-200 selection:text-amber-900 hover:bg-amber-200 hover:bg-opacity-10 focus-visible:bg-amber-100 focus-visible:bg-opacity-10 focus-visible:outline-none xsm:text-base sm:text-lg xl:text-xl',

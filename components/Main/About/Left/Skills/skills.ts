@@ -1,8 +1,8 @@
 export const skills = [
-  'TypeScript',
-  'React.js',
   'Spring Boot',
-  'Express.js',
+  'Angular',
+  'Elasticsearch',
+  'Apache Kafka',
   'SQL',
-  'MongoDB',
+  'React.js',
 ]
